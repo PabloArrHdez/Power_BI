@@ -1,0 +1,91 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 456.77613046701231,
+        "y": 52.913912988044785
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 531.1578947368422,
+            "y": 246.57588481903073
+          },
+          "nodeIndex": "Torneo_2024",
+          "nodeLineageTag": "08189841-01ab-40a3-90b6-f1df3a517602",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 853.73684210526312,
+            "y": 268.53201178500524
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "8862a2f6-9768-464f-8758-42317ef9c83a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1156.5789473684208,
+            "y": 251.89698017748128
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "47463691-446a-4714-b0f7-402a3adf6a35",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 5,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 57.679021497405245,
+            "y": 139.81730361652865
+          },
+          "nodeIndex": "Jugadores",
+          "nodeLineageTag": "aafb57ea-be36-4cc1-ae62-d6f8e3f4856f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 272
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 404.12415184541373
+          },
+          "nodeIndex": "Perfil jugadores",
+          "nodeLineageTag": "465734b6-09ab-47e7-aebf-33459bc311b5",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 296
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 71,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

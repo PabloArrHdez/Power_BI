@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Partidos ATP 2024"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fa9974b2-48ee-4731-88f7-2e12706cf3fe"
+  }
+}
