@@ -1,0 +1,137 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 25.605893389250582
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 393.23076923076928,
+            "y": 0
+          },
+          "nodeIndex": "Liga EEUU (MLS)",
+          "nodeLineageTag": "9ec592a4-62f7-48e4-9581-d55ba49ea674",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 765.37269617040033,
+            "y": 230.76923076923072
+          },
+          "nodeIndex": "Palmares",
+          "nodeLineageTag": "104bba9f-250b-4df5-982c-5f022bebcd95",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Valor_mercado",
+          "nodeLineageTag": "a4391d27-fce8-4006-acfe-993107132d81",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 256.17070411654339
+          },
+          "nodeIndex": "Estadio",
+          "nodeLineageTag": "48a9f42e-fca7-4721-a202-76358819eb6f",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 384.75731155501614,
+            "y": 468.47839642423571
+          },
+          "nodeIndex": "Internet",
+          "nodeLineageTag": "e43dc5e9-7a1d-431c-a654-8138849c5203",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 781.06499505956094,
+            "y": 0
+          },
+          "nodeIndex": "Sede",
+          "nodeLineageTag": "de16318a-b4f2-418f-8bb9-71db50760d87",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1213.0650038627084,
+            "y": 25.605893389250582
+          },
+          "nodeIndex": "TOP 10 Estadios",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1201.6803884780929,
+            "y": 270.23919821211791
+          },
+          "nodeIndex": "TOP 10 Equipos",
+          "nodeLineageTag": "ae0796fb-36ba-4b30-bcd4-3df00a485473",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1497.0650038627084,
+            "y": 210.23919821211786
+          },
+          "nodeIndex": "Medidas",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 65,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

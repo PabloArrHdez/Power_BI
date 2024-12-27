@@ -1,0 +1,3446 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Liga EEUU (MLS)\",\"Palmares\",\"Valor_mercado\",\"Sede\",\"Estadio\",\"Internet\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.1452.0 (24.11)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "es-ES",
+    "cultures": [
+      {
+        "name": "es-ES",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "TOP_10_equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Equipos"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "TOP 10 equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "TOP_10_equipo.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Equipos",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "TOP_10_equipo.valor_mercado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Equipos",
+                    "ConceptualProperty": "Valor mercado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "valor mercado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mercado": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "TOP_10_estadio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Estadios"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "TOP 10 estadio": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "TOP_10_estadio.capacidad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Estadios",
+                    "ConceptualProperty": "Capacidad"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "capacidad": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "TOP_10_estadio.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Estadios",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "TOP_10_estadio.nombre": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TOP 10 Estadios",
+                    "ConceptualProperty": "Nombre"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nombre": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "estadio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Estadio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "estadio": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "estadio.capacidad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Estadio",
+                    "ConceptualProperty": "Capacidad"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "capacidad": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "estadio.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Estadio",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "estadio.nombre": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Estadio",
+                    "ConceptualProperty": "Nombre"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nombre": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "internet": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Internet"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "internet": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "internet.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Internet",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "internet.escudo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Internet",
+                    "ConceptualProperty": "Escudo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "escudo": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "internet.pagina_web": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Internet",
+                    "ConceptualProperty": "Pagina web"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "pagina web": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "pagina mesh": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina net": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina netting": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina network": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina trap": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina snare": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina tissue": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina grid": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina confusion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "pagina labyrinth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  }
+                ]
+              },
+              "liga_EEUU_MLS": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "liga EEUU (MLS)": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "liga_EEUU_MLS.capacidad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Capacidad"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "capacidad": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.ciudad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Ciudad"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ciudad": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.entrenador": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Entrenador"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "entrenador": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "liga_EEUU_MLS.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.escudo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Escudo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "escudo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.estadio": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Estadio"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "estadio": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.estado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Estado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "estado": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.latitud": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Latitud"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "latitud": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.longitud": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Longitud"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "longitud": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "liga_EEUU_MLS.pagina_web": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Liga EEUU (MLS)",
+                    "ConceptualProperty": "Pagina web"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "pagina web": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "pagina mesh": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina net": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina netting": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina network": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina trap": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina snare": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina tissue": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina grid": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "pagina confusion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "pagina labyrinth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "medida": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "medida": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "medida.capacidad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "Capacidad"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "capacidad": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "medida.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "Column"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "column": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "pilaster": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "pier": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "pillar": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "post": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "support": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "stake": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "pole": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "buttress": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "underpinning": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "contribution": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "medida.ranking_VM": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "Ranking_VM"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ranking VM": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Ranking_VM": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "VM": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "Ranking Valor Mercado": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "medida.ranking_estadios": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "Ranking_Estadios"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ranking estadios": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Ranking_Estadios": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "Ranking Capacidad": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "medida.valor_mercado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "Valor Mercado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "valor mercado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mercado": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "palmare": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "palmare": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "palmare.concaf": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "CONCAF"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "concaf": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "palmare.copa_MLS": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "Copa MLS"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "copa MLS": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "MLS": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "palmare.copa_US_open": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "Copa US Open"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "copa US open": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "open": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "US open": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "sweeping": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "palmare.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "palmare.supporters_shield_U_S_A_": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "Supporters' Shield U.S.A."
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "supporters' shield U.S.A.": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "supporter' shield U.S.A.": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  }
+                ]
+              },
+              "palmare.total_copa": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Palmares",
+                    "ConceptualProperty": "Total copas"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "total copa": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "copa": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "aggregate copa": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "overall copa": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "sede": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sede": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sede.ciudad": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede",
+                    "ConceptualProperty": "Ciudad"
+                  }
+                },
+                "SemanticType": "Location",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ciudad": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "city": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "sede.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "sede.estado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede",
+                    "ConceptualProperty": "Estado"
+                  }
+                },
+                "SemanticType": "Location",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "estado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "state or province": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ]
+              },
+              "sede.latitud": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede",
+                    "ConceptualProperty": "Latitud"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "latitud": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "sede.longitud": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Sede",
+                    "ConceptualProperty": "Longitud"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "longitud": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "valor_mercado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Valor_mercado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "valor mercado": {
+                      "State": "Generated",
+                      "Weight": 0.87
+                    }
+                  },
+                  {
+                    "Valor_mercado": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.8613
+                    }
+                  },
+                  {
+                    "mercado": {
+                      "State": "Generated",
+                      "Weight": 0.8439
+                    }
+                  }
+                ]
+              },
+              "valor_mercado.equipo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Valor_mercado",
+                    "ConceptualProperty": "Equipo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "equipo": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "valor_mercado.valor_mercado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Valor_mercado",
+                    "ConceptualProperty": "Valor mercado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "valor mercado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "mercado": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Relationships": {
+              "TOP_10_equipo_has_valor_mercado": {
+                "Binding": {
+                  "ConceptualEntity": "TOP 10 Equipos"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "TOP_10_equipo.valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "TOP_10_equipo"
+                      }
+                    },
+                    "ID": "TOP_10_equipos_have_valor_mercado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "TOP_10_equipo.valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "TOP_10_equipo"
+                      }
+                    },
+                    "ID": "valor_mercado_indicates_how_expensive_TOP_10_equipos_are",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TOP_10_equipo": {
+                    "Target": {
+                      "Entity": "TOP_10_equipo"
+                    }
+                  },
+                  "TOP_10_equipo.valor_mercado": {
+                    "Target": {
+                      "Entity": "TOP_10_equipo.valor_mercado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "TOP_10_estadio_has_capacidad": {
+                "Binding": {
+                  "ConceptualEntity": "TOP 10 Estadios"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "TOP_10_estadio.capacidad"
+                      },
+                      "Subject": {
+                        "Role": "TOP_10_estadio"
+                      }
+                    },
+                    "ID": "TOP_10_estadios_have_capacidads",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TOP_10_estadio": {
+                    "Target": {
+                      "Entity": "TOP_10_estadio"
+                    }
+                  },
+                  "TOP_10_estadio.capacidad": {
+                    "Target": {
+                      "Entity": "TOP_10_estadio.capacidad"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "estadio_has_capacidad": {
+                "Binding": {
+                  "ConceptualEntity": "Estadio"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "estadio.capacidad"
+                      },
+                      "Subject": {
+                        "Role": "estadio"
+                      }
+                    },
+                    "ID": "estadios_have_capacidads",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "estadio": {
+                    "Target": {
+                      "Entity": "estadio"
+                    }
+                  },
+                  "estadio.capacidad": {
+                    "Target": {
+                      "Entity": "estadio.capacidad"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "estadio_has_medida_capacidad": {
+                "Binding": {
+                  "ConceptualEntity": "Estadio"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.capacidad"
+                      },
+                      "Subject": {
+                        "Role": "estadio"
+                      }
+                    },
+                    "ID": "estadios_have_capacidad",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "estadio": {
+                    "Target": {
+                      "Entity": "estadio"
+                    }
+                  },
+                  "medida.capacidad": {
+                    "Target": {
+                      "Entity": "medida.capacidad"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "estadio_has_nombre": {
+                "Binding": {
+                  "ConceptualEntity": "Estadio"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "estadio.nombre"
+                      },
+                      "Subject": {
+                        "Role": "estadio"
+                      }
+                    },
+                    "ID": "estadios_have_nombres",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "estadio": {
+                    "Target": {
+                      "Entity": "estadio"
+                    }
+                  },
+                  "estadio.nombre": {
+                    "Target": {
+                      "Entity": "estadio.nombre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "internet_has_escudo": {
+                "Binding": {
+                  "ConceptualEntity": "Internet"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "internet.escudo"
+                      },
+                      "Subject": {
+                        "Role": "internet"
+                      }
+                    },
+                    "ID": "internets_have_escudos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "internet": {
+                    "Target": {
+                      "Entity": "internet"
+                    }
+                  },
+                  "internet.escudo": {
+                    "Target": {
+                      "Entity": "internet.escudo"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "internet_has_pagina_web": {
+                "Binding": {
+                  "ConceptualEntity": "Internet"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "internet.pagina_web"
+                      },
+                      "Subject": {
+                        "Role": "internet"
+                      }
+                    },
+                    "ID": "internets_have_pagina_webs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "internet": {
+                    "Target": {
+                      "Entity": "internet"
+                    }
+                  },
+                  "internet.pagina_web": {
+                    "Target": {
+                      "Entity": "internet.pagina_web"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_TOP_10_equipo": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "TOP_10_equipo"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_TOP_10_equipos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "TOP_10_equipo"
+                      }
+                    },
+                    "ID": "TOP_10_equipos_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TOP_10_equipo": {
+                    "Target": {
+                      "Entity": "TOP_10_equipo"
+                    }
+                  },
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_TOP_10_estadio": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "TOP_10_estadio"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_TOP_10_estadios",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "TOP_10_estadio"
+                      }
+                    },
+                    "ID": "TOP_10_estadios_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "TOP_10_estadio": {
+                    "Target": {
+                      "Entity": "TOP_10_estadio"
+                    }
+                  },
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_entrenador": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS.entrenador"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_entrenadors",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  },
+                  "liga_EEUU_MLS.entrenador": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS.entrenador"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_estadio": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "estadio"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_estadios",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "estadio"
+                      }
+                    },
+                    "ID": "estadios_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "estadio": {
+                    "Target": {
+                      "Entity": "estadio"
+                    }
+                  },
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_internet": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "internet"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_internets",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "internet"
+                      }
+                    },
+                    "ID": "internets_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "internet": {
+                    "Target": {
+                      "Entity": "internet"
+                    }
+                  },
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_palmare": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_palmares",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  },
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_sede": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sede"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_sedes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "ID": "sedes_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  },
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "liga_EEUU_MLS_has_valor_mercado": {
+                "Binding": {
+                  "ConceptualEntity": "Liga EEUU (MLS)"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "liga_EEUU_MLS"
+                      }
+                    },
+                    "ID": "liga_EEUU_MLS_have_valor_mercado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "liga_EEUU_MLS"
+                      },
+                      "Subject": {
+                        "Role": "valor_mercado"
+                      }
+                    },
+                    "ID": "valor_mercado_have_liga_EEUU_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "liga_EEUU_MLS": {
+                    "Target": {
+                      "Entity": "liga_EEUU_MLS"
+                    }
+                  },
+                  "valor_mercado": {
+                    "Target": {
+                      "Entity": "valor_mercado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "medida_has_column": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.column"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_columns",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.column": {
+                    "Target": {
+                      "Entity": "medida.column"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "medida_has_ranking_VM": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.ranking_VM"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_ranking_VM",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.ranking_VM": {
+                    "Target": {
+                      "Entity": "medida.ranking_VM"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "medida_has_ranking_estadios": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.ranking_estadios"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_ranking_estadios",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.ranking_estadios": {
+                    "Target": {
+                      "Entity": "medida.ranking_estadios"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "palmare_has_concaf": {
+                "Binding": {
+                  "ConceptualEntity": "Palmares"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare.concaf"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_concafs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  },
+                  "palmare.concaf": {
+                    "Target": {
+                      "Entity": "palmare.concaf"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "palmare_has_copa_MLS": {
+                "Binding": {
+                  "ConceptualEntity": "Palmares"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare.copa_MLS"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_copa_MLS",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  },
+                  "palmare.copa_MLS": {
+                    "Target": {
+                      "Entity": "palmare.copa_MLS"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "palmare_has_copa_US_open": {
+                "Binding": {
+                  "ConceptualEntity": "Palmares"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare.copa_US_open"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_copa_US_opens",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  },
+                  "palmare.copa_US_open": {
+                    "Target": {
+                      "Entity": "palmare.copa_US_open"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "palmare_has_supporters_shield_U_S_A_": {
+                "Binding": {
+                  "ConceptualEntity": "Palmares"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare.supporters_shield_U_S_A_"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_supporters_shield_U_S_A_",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  },
+                  "palmare.supporters_shield_U_S_A_": {
+                    "Target": {
+                      "Entity": "palmare.supporters_shield_U_S_A_"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "palmare_has_total_copa": {
+                "Binding": {
+                  "ConceptualEntity": "Palmares"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "palmare.total_copa"
+                      },
+                      "Subject": {
+                        "Role": "palmare"
+                      }
+                    },
+                    "ID": "palmares_have_total_copa",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "palmare": {
+                    "Target": {
+                      "Entity": "palmare"
+                    }
+                  },
+                  "palmare.total_copa": {
+                    "Target": {
+                      "Entity": "palmare.total_copa"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_has_ciudad": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sede.ciudad"
+                      },
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "ID": "sedes_have_ciudad",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.ciudad": {
+                    "Target": {
+                      "Entity": "sede.ciudad"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_has_estado": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sede.estado"
+                      },
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "ID": "sedes_have_estado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.estado": {
+                    "Target": {
+                      "Entity": "sede.estado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_has_latitud": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sede.latitud"
+                      },
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "ID": "sedes_have_latituds",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.latitud": {
+                    "Target": {
+                      "Entity": "sede.latitud"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_has_longitud": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "sede.longitud"
+                      },
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "ID": "sedes_have_longituds",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.longitud": {
+                    "Target": {
+                      "Entity": "sede.longitud"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_in_ciudad": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "ID": "sedes_are_in_ciudad",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "sede.ciudad"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.ciudad": {
+                    "Target": {
+                      "Entity": "sede.ciudad"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "sede.ciudad"
+                  }
+                },
+                "State": "Generated"
+              },
+              "sede_in_estado": {
+                "Binding": {
+                  "ConceptualEntity": "Sede"
+                },
+                "Phrasings": [
+                  {
+                    "ID": "sedes_are_in_estado",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "sede.estado"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "sede"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "sede": {
+                    "Target": {
+                      "Entity": "sede"
+                    }
+                  },
+                  "sede.estado": {
+                    "Target": {
+                      "Entity": "sede.estado"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "sede.estado"
+                  }
+                },
+                "State": "Generated"
+              },
+              "valor_mercado_has_medida_valor_mercado": {
+                "Binding": {
+                  "ConceptualEntity": "Valor_mercado"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "valor_mercado"
+                      }
+                    },
+                    "ID": "valor_mercado_have_valor_mercado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida.valor_mercado": {
+                    "Target": {
+                      "Entity": "medida.valor_mercado"
+                    }
+                  },
+                  "valor_mercado": {
+                    "Target": {
+                      "Entity": "valor_mercado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "valor_mercado_has_valor_mercado": {
+                "Binding": {
+                  "ConceptualEntity": "Valor_mercado"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "valor_mercado.valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "valor_mercado"
+                      }
+                    },
+                    "ID": "valor_mercado_have_valor_mercado1",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "expensive": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Antonyms": [
+                        {
+                          "cheap": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Measurement": {
+                        "Role": "valor_mercado.valor_mercado"
+                      },
+                      "Subject": {
+                        "Role": "valor_mercado"
+                      }
+                    },
+                    "ID": "valor_mercado_indicates_how_expensive_valor_mercado_are",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "valor_mercado": {
+                    "Target": {
+                      "Entity": "valor_mercado"
+                    }
+                  },
+                  "valor_mercado.valor_mercado": {
+                    "Target": {
+                      "Entity": "valor_mercado.valor_mercado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "3.5.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "cd870a79-bf08-e5ff-11c2-2ab9756cd2d8",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "Valor_mercado"
+      },
+      {
+        "name": "515988a3-1544-ca89-e87d-25632c409ec4",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "Estadio"
+      },
+      {
+        "name": "7eda852f-7aac-c4aa-2bb0-b8a8281741cb",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "Internet"
+      },
+      {
+        "name": "7647c069-0180-82fd-c21d-84217dca353b",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "Sede"
+      },
+      {
+        "name": "6907ff16-664c-55e4-3848-4f1ef75d1188",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "Palmares"
+      },
+      {
+        "name": "91a91f5d-844c-723a-930b-3295c11570f1",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "TOP 10 Estadios"
+      },
+      {
+        "name": "1d06c0a6-0325-d2a1-d294-a0a6082f5caf",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Equipo",
+        "fromTable": "Liga EEUU (MLS)",
+        "toColumn": "Equipo",
+        "toTable": "TOP 10 Equipos"
+      }
+    ],
+    "sourceQueryCulture": "es-ES",
+    "tables": [
+      {
+        "name": "TOP 10 Estadios",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "16d8350373944c7bbe1af4e832998941"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "24852a3f-b195-4372-980e-83e51ed7fc27",
+            "sourceColumn": "Estadio[Equipo]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Nombre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "81bf387b-dc1f-40bd-90f6-c39502485dcf",
+            "sourceColumn": "Estadio[Nombre]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Capacidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "1813a89e-d5f3-47d9-94a0-be520fffa8bf",
+            "sourceColumn": "Estadio[Capacidad]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "7eecba86-e6b1-465c-ae90-a55191b2cb88",
+        "partitions": [
+          {
+            "name": "TOP 10 Estadios",
+            "mode": "import",
+            "source": {
+              "expression": "TOPN(10,Estadio,Estadio[Capacidad],DESC) ",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Liga EEUU (MLS)",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2da367f3-d3e4-4e94-8e3b-c1c0692efa8a",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ciudad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5b81b5c5-55d0-4c0d-86ba-11a290246315",
+            "sourceColumn": "Ciudad",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "778fe677-7eb8-47ab-8ace-bdfe9e91cb6e",
+            "sourceColumn": "Estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Latitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "072339d7-c312-42dc-879f-1fc9a67c3477",
+            "sourceColumn": "Latitud",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Longitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "29724a80-ede8-4fb3-bec3-067ad9be9c37",
+            "sourceColumn": "Longitud",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Estadio",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "02a411f6-0f4b-4f50-a046-3fbad331c038",
+            "sourceColumn": "Estadio",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Capacidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "9b852ded-c30b-4f27-b68c-bb6bb0fcc4e5",
+            "sourceColumn": "Capacidad",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Entrenador",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4fa85723-7069-4cae-ab61-6ec4a1105f87",
+            "sourceColumn": "Entrenador",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pagina web",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "821768b3-2953-4922-ae93-1344daf9ff8a",
+            "sourceColumn": "Pagina web",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Escudo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1d1d7cd6-3bb0-4906-9321-cdc068651aae",
+            "sourceColumn": "Escudo",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9ec592a4-62f7-48e4-9581-d55ba49ea674",
+        "partitions": [
+          {
+            "name": "Liga EEUU (MLS)",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Liga EEUU (MLS).csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"team\", type text}, {\"city\", type text}, {\"state\", type text}, {\"latitude\", Int64.Type}, {\"longitude\", Int64.Type}, {\"stadium\", type text}, {\"stadium_capacity\", Int64.Type}, {\"joined\", Int64.Type}, {\"head_coach\", type text}, {\"url\", type text}, {\"wikipedia_url\", type text}, {\"logo_url\", type text}}),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(#\"Tipo cambiado\",{{\"team\", \"Equipo\"}, {\"city\", \"Ciudad\"}, {\"state\", \"Estado\"}, {\"latitude\", \"Latitud\"}, {\"longitude\", \"Longitud\"}, {\"stadium\", \"Estadio\"}, {\"stadium_capacity\", \"Capacidad\"}, {\"head_coach\", \"Entrenador\"}}),",
+                "    #\"Columnas quitadas\" = Table.RemoveColumns(#\"Columnas con nombre cambiado\",{\"joined\", \"wikipedia_url\"}),",
+                "    #\"Columnas con nombre cambiado1\" = Table.RenameColumns(#\"Columnas quitadas\",{{\"url\", \"Pagina web\"}, {\"logo_url\", \"Escudo\"}})",
+                "in",
+                "    #\"Columnas con nombre cambiado1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Palmares",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "72461ec8-326c-49e6-b7d5-c6a5814d13b8",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CONCAF",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ab7d6ae6-df4c-40b7-b729-6ed462290960",
+            "sourceColumn": "CONCAF",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Copa MLS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b83d5a73-5464-4513-80ab-6f8f57f68f26",
+            "sourceColumn": "Copa MLS",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Supporters' Shield U.S.A.",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "13e567a5-bd4e-4212-89b7-88dc004d2f19",
+            "sourceColumn": "Supporters' Shield U.S.A.",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Copa US Open",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "be44a115-10c1-44ab-8eec-b1f192a1678c",
+            "sourceColumn": "Copa US Open",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total copas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "Palmares[CONCAF]+Palmares[Copa MLS]+Palmares[Supporters' Shield U.S.A.]+Palmares[Copa US Open]",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "8c11bdde-aa03-4ba1-a9df-c688df322da2",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "104bba9f-250b-4df5-982c-5f022bebcd95",
+        "partitions": [
+          {
+            "name": "Palmares",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Palmares.csv\"),[Delimiter=\";\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"Equipo\", type text}, {\"CONCAF\", Int64.Type}, {\"Copa MLS\", Int64.Type}, {\"Supporters' Shield U.S.A.\", Int64.Type}, {\"Copa US Open\", Int64.Type}}),",
+                "    #\"Filas ordenadas\" = Table.Sort(#\"Tipo cambiado\",{{\"Copa US Open\", Order.Descending}})",
+                "in",
+                "    #\"Filas ordenadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Valor_mercado",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "eb4a2d12-16ca-40f0-8276-e98a9495b017",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Valor mercado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "1f2589d4-4878-44db-82b7-f151c52257a9",
+            "sourceColumn": "Valor mercado",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a4391d27-fce8-4006-acfe-993107132d81",
+        "partitions": [
+          {
+            "name": "Valor_mercado",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Valor_mercado.csv\"),[Delimiter=\";\", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"Equipo\", type text}, {\"Valor mercado\", Int64.Type}})",
+                "in",
+                "    #\"Tipo cambiado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sede",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "8230b8d4-7834-4506-bfea-f6219216556f",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ciudad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "City",
+            "dataType": "string",
+            "lineageTag": "81d4d0cb-f7b6-4ee1-a018-2e907ed575f1",
+            "sourceColumn": "Ciudad",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "StateOrProvince",
+            "dataType": "string",
+            "lineageTag": "c75b10bf-7b48-4b7d-b93c-454cca3463cd",
+            "sourceColumn": "Estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Latitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "93eca30e-a6b4-4e59-b7f5-5e3153d1c3f0",
+            "sourceColumn": "Latitud",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Longitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37a2eace-9adb-4173-a9ae-a633b33fb375",
+            "sourceColumn": "Longitud",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "de16318a-b4f2-418f-8bb9-71db50760d87",
+        "partitions": [
+          {
+            "name": "Sede",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Liga EEUU (MLS).csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"team\", type text}, {\"city\", type text}, {\"state\", type text}, {\"latitude\", Int64.Type}, {\"longitude\", Int64.Type}, {\"stadium\", type text}, {\"stadium_capacity\", Int64.Type}, {\"joined\", Int64.Type}, {\"head_coach\", type text}, {\"url\", type text}, {\"wikipedia_url\", type text}, {\"logo_url\", type text}}),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(#\"Tipo cambiado\",{{\"team\", \"Equipo\"}, {\"city\", \"Ciudad\"}, {\"state\", \"Estado\"}, {\"latitude\", \"Latitud\"}, {\"longitude\", \"Longitud\"}, {\"stadium\", \"Estadio\"}, {\"stadium_capacity\", \"Capacidad\"}, {\"head_coach\", \"Entrenador\"}}),",
+                "    #\"Columnas quitadas\" = Table.RemoveColumns(#\"Columnas con nombre cambiado\",{\"joined\", \"wikipedia_url\"}),",
+                "    #\"Columnas con nombre cambiado1\" = Table.RenameColumns(#\"Columnas quitadas\",{{\"url\", \"Pagina web\"}, {\"logo_url\", \"Escudo\"}}),",
+                "    #\"Otras columnas quitadas\" = Table.SelectColumns(#\"Columnas con nombre cambiado1\",{\"Equipo\", \"Ciudad\", \"Estado\", \"Latitud\", \"Longitud\"})",
+                "in",
+                "    #\"Otras columnas quitadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Estadio",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c07d23b2-b0b9-4f07-8e4b-5fd4f9a3c0a9",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nombre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d82e0b91-abbd-47bb-a9c1-e6e0a4d6b6fa",
+            "sourceColumn": "Nombre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Capacidad",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "9dd93b8d-f19e-4703-8bc0-8e38d409dbe6",
+            "sourceColumn": "Capacidad",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "48a9f42e-fca7-4721-a202-76358819eb6f",
+        "partitions": [
+          {
+            "name": "Estadio",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Liga EEUU (MLS).csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"team\", type text}, {\"city\", type text}, {\"state\", type text}, {\"latitude\", Int64.Type}, {\"longitude\", Int64.Type}, {\"stadium\", type text}, {\"stadium_capacity\", Int64.Type}, {\"joined\", Int64.Type}, {\"head_coach\", type text}, {\"url\", type text}, {\"wikipedia_url\", type text}, {\"logo_url\", type text}}),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(#\"Tipo cambiado\",{{\"team\", \"Equipo\"}, {\"city\", \"Ciudad\"}, {\"state\", \"Estado\"}, {\"latitude\", \"Latitud\"}, {\"longitude\", \"Longitud\"}, {\"stadium\", \"Estadio\"}, {\"stadium_capacity\", \"Capacidad\"}, {\"head_coach\", \"Entrenador\"}}),",
+                "    #\"Columnas quitadas\" = Table.RemoveColumns(#\"Columnas con nombre cambiado\",{\"joined\", \"wikipedia_url\"}),",
+                "    #\"Columnas con nombre cambiado1\" = Table.RenameColumns(#\"Columnas quitadas\",{{\"url\", \"Pagina web\"}, {\"logo_url\", \"Escudo\"}}),",
+                "    #\"Otras columnas quitadas\" = Table.SelectColumns(#\"Columnas con nombre cambiado1\",{\"Equipo\", \"Estadio\", \"Capacidad\"}),",
+                "    #\"Columnas con nombre cambiado2\" = Table.RenameColumns(#\"Otras columnas quitadas\",{{\"Estadio\", \"Nombre\"}})",
+                "in",
+                "    #\"Columnas con nombre cambiado2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Internet",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegación"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "553058e5-beb9-48a5-bec1-b41b27bdd27a",
+            "sourceColumn": "Equipo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pagina web",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "88a355f1-5a07-4ae8-b354-594dbba01216",
+            "sourceColumn": "Pagina web",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Escudo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "6841939e-e800-413c-88a9-54c4bfd3e975",
+            "sourceColumn": "Escudo",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e43dc5e9-7a1d-431c-a654-8138849c5203",
+        "partitions": [
+          {
+            "name": "Internet",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(\"C:\\Users\\pablo\\OneDrive\\Escritorio\\Liga MLS (EE.UU)\\datos\\Liga EEUU (MLS).csv\"),[Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Encabezados promovidos\" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Encabezados promovidos\",{{\"team\", type text}, {\"city\", type text}, {\"state\", type text}, {\"latitude\", Int64.Type}, {\"longitude\", Int64.Type}, {\"stadium\", type text}, {\"stadium_capacity\", Int64.Type}, {\"joined\", Int64.Type}, {\"head_coach\", type text}, {\"url\", type text}, {\"wikipedia_url\", type text}, {\"logo_url\", type text}}),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(#\"Tipo cambiado\",{{\"team\", \"Equipo\"}, {\"city\", \"Ciudad\"}, {\"state\", \"Estado\"}, {\"latitude\", \"Latitud\"}, {\"longitude\", \"Longitud\"}, {\"stadium\", \"Estadio\"}, {\"stadium_capacity\", \"Capacidad\"}, {\"head_coach\", \"Entrenador\"}}),",
+                "    #\"Columnas quitadas\" = Table.RemoveColumns(#\"Columnas con nombre cambiado\",{\"joined\", \"wikipedia_url\"}),",
+                "    #\"Columnas con nombre cambiado1\" = Table.RenameColumns(#\"Columnas quitadas\",{{\"url\", \"Pagina web\"}, {\"logo_url\", \"Escudo\"}}),",
+                "    #\"Otras columnas quitadas\" = Table.SelectColumns(#\"Columnas con nombre cambiado1\",{\"Equipo\", \"Pagina web\", \"Escudo\"})",
+                "in",
+                "    #\"Otras columnas quitadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TOP 10 Equipos",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "96ecb2589a34484baa6157910d7f4f79"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Equipo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "4387df50-f01e-4545-a92a-20749c9385f4",
+            "sourceColumn": "Valor_mercado[Equipo]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Valor mercado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "dbf139db-b56f-4d23-8f2b-7161f08735d7",
+            "sourceColumn": "Valor_mercado[Valor mercado]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "ae0796fb-36ba-4b30-bcd4-3df00a485473",
+        "partitions": [
+          {
+            "name": "TOP 10 Equipos",
+            "mode": "import",
+            "source": {
+              "expression": "TOPN(10,Valor_mercado,Valor_mercado[Valor mercado],DESC) ",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "532a2a0078aa45348578520dc24a805c"
+          },
+          {
+            "name": "436ba87b-9c83-4389-a31b-ebd06a36be98",
+            "value": "{\"Expression\":\"\"}"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "74ee4300-4ed8-43cf-860c-61cdc5dc498d",
+            "sourceColumn": "[Column]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "b34696a8-ad3f-4c8f-951c-5a1bc3695721",
+        "measures": [
+          {
+            "name": "Ranking_Estadios",
+            "expression": "RANKX(ALL(Estadio[Capacidad]),[Capacidad],,DESC)",
+            "formatString": "0",
+            "lineageTag": "3ccfd5ac-36f6-4ed7-a45d-1a7868111ed8"
+          },
+          {
+            "name": "Capacidad",
+            "expression": "SUM(Estadio[Capacidad])",
+            "formatString": "0",
+            "lineageTag": "bcdca59e-a462-4a45-a6c9-4de031ee67e9"
+          },
+          {
+            "name": "Valor Mercado",
+            "expression": "SUM(Valor_mercado[Valor mercado])",
+            "formatString": "0",
+            "lineageTag": "bbb2e7a5-61c8-44da-8f95-1102d0018269"
+          },
+          {
+            "name": "Ranking_VM",
+            "expression": "RANKX(ALL(Valor_mercado[Valor mercado]),[Valor Mercado],,DESC)",
+            "formatString": "0",
+            "lineageTag": "ba4e6f69-e9a6-4859-ab29-e7c873a9e16b"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas",
+            "mode": "import",
+            "source": {
+              "expression": "Row(\"Column\", BLANK())",
+              "type": "calculated"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
