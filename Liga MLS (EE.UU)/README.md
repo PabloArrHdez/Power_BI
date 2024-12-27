@@ -1,3 +1,5 @@
+# Descripción #
+
 El proyecto consta de un supuesto caso de análisis de datos, junto con el cálculo de varias medidas y dimensiones, para conocer la situación de la Liga de fútbol de Estados Unidos (MLS). En ella, se muestra los diferentes equipos que lo conforman, su palmares, y las desigualdades que existe con respecto al palmares que tienen, la capacidad que tiene los diferentes estadios que lo conforman y, el valor de mercado actual de cada uno de ellos.
  
  La adquisición de los datos ha sido a través de GitHub (https://github.com/gavinr/usa-soccer/blob/master/mls.csv), concretamente del usuario "Gavin Rehkemper" (gavinr). También, gracias a la ayuda de la pagina web de transfermarkt (https://www.transfermarkt.es/), he podido adquirir la información sobre el valor de mercado de cada equipo.
