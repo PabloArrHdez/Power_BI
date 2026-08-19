@@ -1,0 +1,103 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 262,
+            "y": 0
+          },
+          "nodeIndex": "data",
+          "nodeLineageTag": "70def294-d8cf-4ec8-9957-13ccc61c67f6",
+          "size": {
+            "height": 312.7659574468085,
+            "width": 244.52631578947364
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 865.91489361702133,
+            "y": 29.61702127659575
+          },
+          "nodeIndex": "Posicion",
+          "nodeLineageTag": "4e934bbf-da25-417d-a56a-b1b64b8cbdff",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 856,
+            "y": 218.97872340425531
+          },
+          "nodeIndex": "Seleccion",
+          "nodeLineageTag": "58f78827-dcf2-4706-8d65-726401f0232e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 546.92198581560274,
+            "y": 359.68794867332952
+          },
+          "nodeIndex": "Club",
+          "nodeLineageTag": "8c9adb76-a880-45e0-bf06-5c50699c2997",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 148.80851063829783
+        },
+        {
+          "location": {
+            "x": 1306.2482269503546,
+            "y": 216.48936170212767
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "72235a4f-a763-40b5-9dd4-06a9cc325b3c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 254.56401642403881,
+            "y": 409.03695679280514
+          },
+          "nodeIndex": "Nacimiento",
+          "nodeLineageTag": "90e9d91f-bc65-4664-8faa-c0846f9d03da",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 68,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

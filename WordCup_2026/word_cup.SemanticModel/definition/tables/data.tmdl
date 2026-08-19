@@ -1,0 +1,700 @@
+table data
+	lineageTag: 70def294-d8cf-4ec8-9957-13ccc61c67f6
+
+	column ID_jugador
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 49b2a416-f4e0-4788-b81b-f13317a3ed8f
+		summarizeBy: sum
+		sourceColumn: ID_jugador
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Jugador
+		dataType: string
+		lineageTag: 654c5d61-dc3f-4006-b27c-79d46d27d354
+		summarizeBy: none
+		sourceColumn: Jugador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posicion
+		dataType: string
+		isHidden
+		lineageTag: 94bcb1fc-2f2e-45bd-9d45-c8f6a00c1bfb
+		summarizeBy: none
+		sourceColumn: Posicion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minutos
+		dataType: int64
+		formatString: 0
+		lineageTag: f29befb9-eaf0-47d1-b304-5c8c897d7f61
+		summarizeBy: sum
+		sourceColumn: Minutos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asistencias
+		dataType: int64
+		formatString: 0
+		lineageTag: cea0dda7-5aff-4605-936b-92b32c010f6e
+		summarizeBy: sum
+		sourceColumn: Asistencias
+
+		annotation SummarizationSetBy = Automatic
+
+	column Edad
+		dataType: int64
+		formatString: 0
+		lineageTag: c9ea7485-78a8-42b4-b329-362e809c2560
+		summarizeBy: sum
+		sourceColumn: Edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año_nacimiento
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cc89acc0-c017-4711-8c37-49bfdb22c99b
+		summarizeBy: none
+		sourceColumn: Año_nacimiento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Selección
+		dataType: string
+		isHidden
+		lineageTag: 3661fd01-c9a3-41ce-ae95-2811fdb3fa11
+		summarizeBy: none
+		sourceColumn: Selección
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Club
+		dataType: string
+		isHidden
+		lineageTag: 3186304d-1b3a-444e-9380-72e67c28218f
+		summarizeBy: none
+		sourceColumn: Club
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column País_club
+		dataType: string
+		isHidden
+		lineageTag: b505be04-23e3-435e-8777-635f5743c646
+		summarizeBy: none
+		sourceColumn: País_club
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_posicion =
+			SWITCH(
+			    TRUE(),
+			    'data'[Posicion] = "MF", 1,
+			    'data'[Posicion] = "FW", 2,
+			    'data'[Posicion] = "DF", 3,
+			    'data'[Posicion] = "GK", 4,
+			    'data'[Posicion] = "FWMF", 5,
+			    'data'[Posicion] = "MFFW", 6,
+			    'data'[Posicion] = "MFDF", 7,
+			    'data'[Posicion] = "DFMF", 8,
+			    'data'[Posicion] = "DFFW", 9,
+			    BLANK()
+			    )
+		isHidden
+		formatString: 0
+		lineageTag: 9dcf0183-7832-4ffd-b6fa-08b346d8d582
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_seleccion =
+			
+			SWITCH(
+			    TRUE(),
+			    'data'[Selección] = "United States", 1,
+			    'data'[Selección] = "Norway", 2,
+			    'data'[Selección] = "Egypt", 3,
+			    'data'[Selección] = "Tunisia", 4,
+			    'data'[Selección] = "Saudi Arabia", 5,
+			    'data'[Selección] = "Uzbekistan", 6,
+			    'data'[Selección] = "Qatar", 7,
+			    'data'[Selección] = "Jordan", 8,
+			    'data'[Selección] = "Scotland", 9,
+			    'data'[Selección] = "South Africa", 10,
+			    'data'[Selección] = "Haiti", 11,
+			    'data'[Selección] = "Côte d'Ivoire", 12,
+			    'data'[Selección] = "Ghana", 13,
+			    'data'[Selección] = "Switzerland", 14,
+			    'data'[Selección] = "Uruguay", 15,
+			    'data'[Selección] = "Canada", 16,
+			    'data'[Selección] = "Algeria", 17,
+			    'data'[Selección] = "Netherlands", 18,
+			    'data'[Selección] = "Türkiye", 19,
+			    'data'[Selección] = "France", 20,
+			    'data'[Selección] = "Austria", 21,
+			    'data'[Selección] = "Bosnia-Herz", 22,
+			    'data'[Selección] = "Ecuador", 23,
+			    'data'[Selección] = "Paraguay", 24,
+			    'data'[Selección] = "Iraq", 25,
+			    'data'[Selección] = "Sweden", 26,
+			    'data'[Selección] = "IR Iran", 27,
+			    'data'[Selección] = "Brazil", 28,
+			    'data'[Selección] = "Argentina", 29,
+			    'data'[Selección] = "Mexico", 30,
+			    'data'[Selección] = "Morocco", 31,
+			    'data'[Selección] = "Panama", 32,
+			    'data'[Selección] = "Germany", 33,
+			    'data'[Selección] = "England", 34,
+			    'data'[Selección] = "Curaçao", 35,
+			    'data'[Selección] = "Portugal", 36,
+			    'data'[Selección] = "Cabo Verde", 37,
+			    'data'[Selección] = "Colombia", 38,
+			    'data'[Selección] = "Spain", 39,
+			    'data'[Selección] = "Congo DR", 40,
+			    'data'[Selección] = "Croatia", 41,
+			    'data'[Selección] = "Australia", 42,
+			    'data'[Selección] = "New Zealand", 43,
+			    'data'[Selección] = "Senegal", 44,
+			    'data'[Selección] = "Belgium", 45,
+			    'data'[Selección] = "Korea Republic", 46,
+			    'data'[Selección] = "Czechia", 47,
+			    'data'[Selección] = "Japan", 48,
+			    BLANK()
+			    )
+		isHidden
+		formatString: 0
+		lineageTag: ea225aee-f501-4733-b8d7-b580d0826e33
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_club = ```
+			
+			 SWITCH(
+			    TRUE(),
+			    'data'[Club] = "Leeds United", 1,
+			    'data'[Club] = "Rangers", 2,
+			    'data'[Club] = "Barcelona B", 3,
+			    'data'[Club] = "Zamalek SC", 4,
+			    'data'[Club] = "Nice", 5,
+			    'data'[Club] = "Lens", 6,
+			    'data'[Club] = "Dibba Al Fujairah", 7,
+			    'data'[Club] = "Al-Wakrah", 8,
+			    'data'[Club] = "Al-Salmiya SC", 9,
+			    'data'[Club] = "Al-Karma", 10,
+			    'data'[Club] = "Al-Quwa Al-Jawiya", 11,
+			    'data'[Club] = "Selangor FA", 12,
+			    'data'[Club] = "Al-Hussein SC", 13,
+			    'data'[Club] = "Al Rayyan SC", 14,
+			    'data'[Club] = "FC Copenhagen", 15,
+			    'data'[Club] = "Torino", 16,
+			    'data'[Club] = "Sundowns", 17,
+			    'data'[Club] = "Bournemouth", 18,
+			    'data'[Club] = "LDU Quito", 19,
+			    'data'[Club] = "Nordsjælland", 20,
+			    'data'[Club] = "Monaco", 21,
+			    'data'[Club] = "Wolfsburg", 22,
+			    'data'[Club] = "Pisa", 23,
+			    'data'[Club] = "Al Sadd", 24,
+			    'data'[Club] = "Beşiktaş", 25,
+			    'data'[Club] = "América", 26,
+			    'data'[Club] = "Norwich City", 27,
+			    'data'[Club] = "Cultural Leonesa", 28,
+			    'data'[Club] = "Manchester City", 29,
+			    'data'[Club] = "Brentford", 30,
+			    'data'[Club] = "Inter", 31,
+			    'data'[Club] = "Galatasaray", 32,
+			    'data'[Club] = "Fenerbahçe", 33,
+			    'data'[Club] = "Real Madrid", 34,
+			    'data'[Club] = "RB Salzburg", 35,
+			    'data'[Club] = "Independiente", 36,
+			    'data'[Club] = "Sunderland", 37,
+			    'data'[Club] = "Al Duhail SC", 38,
+			    'data'[Club] = "Pogoń Szczecin", 39,
+			    'data'[Club] = "Malmö", 40,
+			    'data'[Club] = "Pakhtakor Tashkent FK", 41,
+			    'data'[Club] = "Persepolis", 42,
+			    'data'[Club] = "Liverpool", 43,
+			    'data'[Club] = "Atlético Madrid", 44,
+			    'data'[Club] = "Atlanta Utd", 45,
+			    'data'[Club] = "Atlético Mineiro", 46,
+			    'data'[Club] = "Guadalajara", 47,
+			    'data'[Club] = "West Ham", 48,
+			    'data'[Club] = "Frankfurt", 49,
+			    'data'[Club] = "Burnley", 50,
+			    'data'[Club] = "Mainz 05", 51,
+			    'data'[Club] = "Cracovia", 52,
+			    'data'[Club] = "FK Bukhara Nurafshon", 53,
+			    'data'[Club] = "Real Betis", 54,
+			    'data'[Club] = "AEK Larnaca", 55,
+			    'data'[Club] = "Nottingham", 56,
+			    'data'[Club] = "LASK", 57,
+			    'data'[Club] = "Bodø/Glimt", 58,
+			    'data'[Club] = "Dortmund", 59,
+			    'data'[Club] = "AE Kifisia", 60,
+			    'data'[Club] = "Al-Ittihad", 61,
+			    'data'[Club] = "Orlando Pirates", 62,
+			    'data'[Club] = "FC Seoul", 63,
+			    'data'[Club] = "Sporting CP", 64,
+			    'data'[Club] = "Benfica", 65,
+			    'data'[Club] = "Vit. Guimarães", 66,
+			    'data'[Club] = "Ind. Rivadavia", 67,
+			    'data'[Club] = "Angers", 68,
+			    'data'[Club] = "Columbus Crew", 69,
+			    'data'[Club] = "Palmeiras", 70,
+			    'data'[Club] = "Red Star", 71,
+			    'data'[Club] = "Accra Hearts of Oak", 72,
+			    'data'[Club] = "Al Ahly", 73,
+			    'data'[Club] = "Esteghlal", 74,
+			    'data'[Club] = "St. Gallen", 75,
+			    'data'[Club] = "Brighton", 76,
+			    'data'[Club] = "Leicester City", 77,
+			    'data'[Club] = "Roma", 78,
+			    'data'[Club] = "Al-Shabab", 79,
+			    'data'[Club] = "Volendam", 80,
+			    'data'[Club] = "76 Iğdır Belediyespor", 81,
+			    'data'[Club] = "PSV", 82,
+			    'data'[Club] = "Grêmio", 83,
+			    'data'[Club] = "Al Jazira Club", 84,
+			    'data'[Club] = "Mazatlán", 85,
+			    'data'[Club] = "Strasbourg", 86,
+			    'data'[Club] = "PSG", 87,
+			    'data'[Club] = "FC Astana", 88,
+			    'data'[Club] = "Al-Shorta", 89,
+			    'data'[Club] = "Como", 90,
+			    'data'[Club] = "Al Dhafra SCC", 91,
+			    'data'[Club] = "Gladbach", 92,
+			    'data'[Club] = "Konyaspor", 93,
+			    'data'[Club] = "Melb City", 94,
+			    'data'[Club] = "Tractor", 95,
+			    'data'[Club] = "JS Kabylie", 96,
+			    'data'[Club] = "Hellas Verona", 97,
+			    'data'[Club] = "Viking", 98,
+			    'data'[Club] = "Wolves", 99,
+			    'data'[Club] = "Kasımpaşa", 100,
+			    'data'[Club] = "USM Alger", 101,
+			    'data'[Club] = "Győr", 102,
+			    'data'[Club] = "Akron Tolyatti", 103,
+			    'data'[Club] = "Lille", 104,
+			    'data'[Club] = "Tottenham", 105,
+			    'data'[Club] = "Fulham", 106,
+			    'data'[Club] = "Vancouver", 107,
+			    'data'[Club] = "Holstein Kiel", 108,
+			    'data'[Club] = "Sheffield United", 109,
+			    'data'[Club] = "Slovan Bratislava", 110,
+			    'data'[Club] = "São Paulo", 111,
+			    'data'[Club] = "Spartak Moscow", 112,
+			    'data'[Club] = "Feyenoord", 113,
+			    'data'[Club] = "Al-Hilal", 114,
+			    'data'[Club] = "Al-Nassr", 115,
+			    'data'[Club] = "Minnesota Utd", 116,
+			    'data'[Club] = "Kayserispor", 117,
+			    'data'[Club] = "Servette FC", 118,
+			    'data'[Club] = "Villarreal", 119,
+			    'data'[Club] = "Osasuna", 120,
+			    'data'[Club] = "Al-Ahli", 121,
+			    'data'[Club] = "Swansea City", 122,
+			    'data'[Club] = "Newcastle", 123,
+			    'data'[Club] = "Karlsruher", 124,
+			    'data'[Club] = "Portsmouth", 125,
+			    'data'[Club] = "Estrela", 126,
+			    'data'[Club] = "Wrexham", 127,
+			    'data'[Club] = "Dynamo Moskva", 128,
+			    'data'[Club] = "Huracán", 129,
+			    'data'[Club] = "Chelsea", 130,
+			    'data'[Club] = "Rosario Central", 131,
+			    'data'[Club] = "Lanús", 132,
+			    'data'[Club] = "Barcelona", 133,
+			    'data'[Club] = "Fluminense", 134,
+			    'data'[Club] = "Manchester Utd", 135,
+			    'data'[Club] = "Auxerre", 136,
+			    'data'[Club] = "River Plate", 137,
+			    'data'[Club] = "Viktoria Plzeň", 138,
+			    'data'[Club] = "Slavia Prague", 139,
+			    'data'[Club] = "Club Africain", 140,
+			    'data'[Club] = "AZ Alkmaar", 141,
+			    'data'[Club] = "Paris FC", 142,
+			    'data'[Club] = "LAFC", 143,
+			    'data'[Club] = "Castellón", 144,
+			    'data'[Club] = "Parma", 145,
+			    'data'[Club] = "Rayo Vallecano", 146,
+			    'data'[Club] = "Zürich", 147,
+			    'data'[Club] = "Valencia", 148,
+			    'data'[Club] = "Juventus", 149,
+			    'data'[Club] = "Krasnodar", 150,
+			    'data'[Club] = "Marseille", 151,
+			    'data'[Club] = "Porto", 152,
+			    'data'[Club] = "Başakşehir", 153,
+			    'data'[Club] = "Mallorca", 154,
+			    'data'[Club] = "Hoffenheim", 155,
+			    'data'[Club] = "Orlando City", 156,
+			    'data'[Club] = "Millwall", 157,
+			    'data'[Club] = "Kilmarnock", 158,
+			    'data'[Club] = "Ahly Sfaxien", 159,
+			    'data'[Club] = "Flamengo", 160,
+			    'data'[Club] = "Hradec Králové", 161,
+			    'data'[Club] = "Union SG", 162,
+			    'data'[Club] = "Bayern Munich", 163,
+			    'data'[Club] = "Plaza Amador", 164,
+			    'data'[Club] = "Al-Wehdat SC", 165,
+			    'data'[Club] = "Napoli", 166,
+			    'data'[Club] = "Atalanta", 167,
+			    'data'[Club] = "Inter Miami", 168,
+			    'data'[Club] = "FC Dallas", 169,
+			    'data'[Club] = "Lugano", 170,
+			    'data'[Club] = "Stuttgart", 171,
+			    'data'[Club] = "Persib Bandung", 172,
+			    'data'[Club] = "Cercle Brugge", 173,
+			    'data'[Club] = "Le Havre", 174,
+			    'data'[Club] = "León", 175,
+			    'data'[Club] = "Lorient", 176,
+			    'data'[Club] = "Aston Villa", 177,
+			    'data'[Club] = "Al Bataeh", 178,
+			    'data'[Club] = "RB Leipzig", 179,
+			    'data'[Club] = "Ludogorets", 180,
+			    'data'[Club] = "Puskás Akad.", 181,
+			    'data'[Club] = "Gent", 182,
+			    'data'[Club] = "Charlton Athletic", 183,
+			    'data'[Club] = "Schalke 04", 184,
+			    'data'[Club] = "RKC Waalwijk", 185,
+			    'data'[Club] = "Alanyaspor", 186,
+			    'data'[Club] = "Auckland FC", 187,
+			    'data'[Club] = "Rennes", 188,
+			    'data'[Club] = "Lyon", 189,
+			    'data'[Club] = "Saprissa", 190,
+			    'data'[Club] = "Milan", 191,
+			    'data'[Club] = "Toronto FC", 192,
+			    'data'[Club] = "Nancy", 193,
+			    'data'[Club] = "Al-Ahli Dubai FC", 194,
+			    'data'[Club] = "Arsenal", 195,
+			    'data'[Club] = "Univ Católica", 196,
+			    'data'[Club] = "Pyramids FC", 197,
+			    'data'[Club] = "Venezia", 198,
+			    'data'[Club] = "Young Boys", 199,
+			    'data'[Club] = "Al-Arabi", 200,
+			    'data'[Club] = "Bologna", 201,
+			    'data'[Club] = "Zwolle", 202,
+			    'data'[Club] = "Rizespor", 203,
+			    'data'[Club] = "NEC Nijmegen", 204,
+			    'data'[Club] = "Vizela", 205,
+			    'data'[Club] = "NYCFC", 206,
+			    'data'[Club] = "Werder Bremen", 207,
+			    'data'[Club] = "Abha", 208,
+			    'data'[Club] = "Toluca", 209,
+			    'data'[Club] = "Al-Gharafa Sports Club", 210,
+			    'data'[Club] = "Albirex Niigata", 211,
+			    'data'[Club] = "Al-Ettifaq", 212,
+			    'data'[Club] = "Augsburg", 213,
+			    'data'[Club] = "Al-Nasr Dubai", 214,
+			    'data'[Club] = "Frosinone", 215,
+			    'data'[Club] = "Al-Ittihad Kalba", 216,
+			    'data'[Club] = "Al-Wahda FC", 217,
+			    'data'[Club] = "Gangwon FC", 218,
+			    'data'[Club] = "San Lorenzo", 219,
+			    'data'[Club] = "San Diego FC", 220,
+			    'data'[Club] = "Vasco da Gama", 221,
+			    'data'[Club] = "Maccabi Haifa", 222,
+			    'data'[Club] = "Sint-Truiden", 223,
+			    'data'[Club] = "Braga", 224,
+			    'data'[Club] = "Midtjylland", 225,
+			    'data'[Club] = "Crystal Palace", 226,
+			    'data'[Club] = "Everton", 227,
+			    'data'[Club] = "Dep. La Guaira", 228,
+			    'data'[Club] = "Hull City", 229,
+			    'data'[Club] = "Sampdoria", 230,
+			    'data'[Club] = "Sepahan", 231,
+			    'data'[Club] = "Mechelen", 232,
+			    'data'[Club] = "Ipswich Town", 233,
+			    'data'[Club] = "Espérance Tunis", 234,
+			    'data'[Club] = "Hibernian", 235,
+			    'data'[Club] = "Middlesbrough", 236,
+			    'data'[Club] = "Al-Zawra'a SC", 237,
+			    'data'[Club] = "Oviedo", 238,
+			    'data'[Club] = "Neom", 239,
+			    'data'[Club] = "Zenit", 240,
+			    'data'[Club] = "Colorado Rapids", 241,
+			    'data'[Club] = "Heracles Almelo", 242,
+			    'data'[Club] = "Anderlecht", 243,
+			    'data'[Club] = "Celtic", 244,
+			    'data'[Club] = "Celta Vigo", 245,
+			    'data'[Club] = "Trabzonspor", 246,
+			    'data'[Club] = "Utrecht", 247,
+			    'data'[Club] = "Watford", 248,
+			    'data'[Club] = "St Pauli", 249,
+			    'data'[Club] = "Neftchi FK", 250,
+			    'data'[Club] = "Al-Talaba", 251,
+			    'data'[Club] = "Ajax", 252,
+			    'data'[Club] = "Grazer AK", 253,
+			    'data'[Club] = "Genk", 254,
+			    'data'[Club] = "Düsseldorf", 255,
+			    'data'[Club] = "Dender", 256,
+			    'data'[Club] = "Al-Najma", 257,
+			    'data'[Club] = "Philadelphia", 258,
+			    'data'[Club] = "Jeonbuk", 259,
+			    'data'[Club] = "Zhejiang", 260,
+			    'data'[Club] = "Navbahor", 261,
+			    'data'[Club] = "Ferencváros", 262,
+			    'data'[Club] = "Motherwell", 263,
+			    'data'[Club] = "Al-Qadsiah", 264,
+			    'data'[Club] = "Olympiacos", 265,
+			    'data'[Club] = "Al Ain", 266,
+			    'data'[Club] = "Aris Limassol", 267,
+			    'data'[Club] = "Widzew Łódź", 268,
+			    'data'[Club] = "FC Surkhon", 269,
+			    'data'[Club] = "Udinese", 270,
+			    'data'[Club] = "Terengganu City", 271,
+			    'data'[Club] = "Union Berlin", 272,
+			    'data'[Club] = "Gil Vicente FC", 273,
+			    'data'[Club] = "Sassuolo", 274,
+			    'data'[Club] = "Real Sociedad", 275,
+			    'data'[Club] = "Derby County", 276,
+			    'data'[Club] = "Athletic Club", 277,
+			    'data'[Club] = "Freiburg", 278,
+			    'data'[Club] = "Cruz Azul", 279,
+			    'data'[Club] = "Dinamo Zagreb", 280,
+			    'data'[Club] = "Casa Pia", 281,
+			    'data'[Club] = "Miami FC", 282,
+			    'data'[Club] = "Pafos FC", 283,
+			    'data'[Club] = "FC Juárez", 284,
+			    'data'[Club] = "Univ. Cluj", 285,
+			    'data'[Club] = "Nantes", 286,
+			    'data'[Club] = "Slovan Liberec", 287,
+			    'data'[Club] = "Talleres–C", 288,
+			    'data'[Club] = "Sturm Graz", 289,
+			    'data'[Club] = "Al-Shamal Sports Club", 290,
+			    'data'[Club] = "Atlético San Luis", 291,
+			    'data'[Club] = "Beveren", 292,
+			    'data'[Club] = "UNAM", 293,
+			    'data'[Club] = "Kiryat Shmona", 294,
+			    'data'[Club] = "AEL Limassol", 295,
+			    'data'[Club] = "D. Makhachkala", 296,
+			    'data'[Club] = "Leverkusen", 297,
+			    'data'[Club] = "Chicago Fire", 298,
+			    'data'[Club] = "Montpellier", 299,
+			    'data'[Club] = "Silkeborg", 300,
+			    'data'[Club] = "Toulouse", 301,
+			    'data'[Club] = "Club Brugge", 302,
+			    'data'[Club] = "Corinthians", 303,
+			    'data'[Club] = "Cagliari", 304,
+			    'data'[Club] = "Rostov", 305,
+			    'data'[Club] = "Loko Moscow", 306,
+			    'data'[Club] = "Daejeon Hana", 307,
+			    'data'[Club] = "Tijuana", 308,
+			    'data'[Club] = "Al-Fayha", 309,
+			    'data'[Club] = "Atromitos", 310,
+			    'data'[Club] = "Hamburger SV", 311,
+			    'data'[Club] = "FC Tokyo", 312,
+			    'data'[Club] = "Reims", 313,
+			    'data'[Club] = "FC Nasaf", 314,
+			    'data'[Club] = "Austin FC", 315,
+			    'data'[Club] = "Foolad", 316,
+			    'data'[Club] = "Santos", 317,
+			    'data'[Club] = "AIK Stockholm", 318,
+			    'data'[Club] = "Telstar", 319,
+			    'data'[Club] = "Sevilla", 320,
+			    'data'[Club] = "Hannover 96", 321,
+			    'data'[Club] = "Sydney FC", 322,
+			    'data'[Club] = "Saint-Étienne", 323,
+			    'data'[Club] = "Al-Sailiya SC", 324,
+			    'data'[Club] = "Girona", 325,
+			    'data'[Club] = "Al-Ula", 326,
+			    'data'[Club] = "Boca Juniors", 327,
+			    'data'[Club] = "FCSB", 328,
+			    'data'[Club] = "Wellington", 329,
+			    'data'[Club] = "Espanyol", 330,
+			    'data'[Club] = "Shamrock", 331,
+			    'data'[Club] = "AEK Athens", 332,
+			    'data'[Club] = "RB Bragantino", 333,
+			    'data'[Club] = "Bastia", 334,
+			    'data'[Club] = "Fiorentina", 335,
+			    'data'[Club] = "Almere City", 336,
+			    'data'[Club] = "Racing Sant", 337,
+			    'data'[Club] = "Nashville SC", 338,
+			    'data'[Club] = "Rijeka", 339,
+			    'data'[Club] = "PAOK", 340,
+			    'data'[Club] = "Puerto Cabello", 341,
+			    'data'[Club] = "Qatar SC", 342,
+			    'data'[Club] = "Charlotte", 343,
+			    'data'[Club] = "NK Maribor", 344,
+			    'data'[Club] = "FC Cincinnati", 345,
+			    'data'[Club] = "Internacional", 346,
+			    'data'[Club] = "Apollon Limassol", 347,
+			    'data'[Club] = "Levante", 348,
+			    'data'[Club] = "Al-Fateh", 349,
+			    'data'[Club] = "ZED", 350,
+			    'data'[Club] = "Sparta R.", 351,
+			    'data'[Club] = "Cremonese", 352,
+			    'data'[Club] = "Botafogo–RJ", 353,
+			    'data'[Club] = "AC Omonia", 354,
+			    'data'[Club] = "Birmingham City", 355,
+			    'data'[Club] = "Hearts", 356,
+			    'data'[Club] = "Raja Casablanca", 357,
+			    'data'[Club] = "Sarpsborg 08", 358,
+			    'data'[Club] = "Baniyas FC", 359,
+			    'data'[Club] = "Hajduk Split", 360,
+			    'data'[Club] = "1. FC Tatran Prešov B", 361,
+			    'data'[Club] = "Tondela", 362,
+			    'data'[Club] = "Southampton", 363,
+			    'data'[Club] = "Mjällby", 364,
+			    'data'[Club] = "Port FC", 365,
+			    'data'[Club] = "Portland Timbers", 366,
+			    'data'[Club] = "Austria Wien", 367,
+			    'data'[Club] = "Brøndby", 368,
+			    'data'[Club] = "Coventry City", 369,
+			    'data'[Club] = "NE Revolution", 370,
+			    'data'[Club] = "FK Dinamo Samarqand", 371,
+			    'data'[Club] = "Pachuca", 372,
+			    'data'[Club] = "Maccabi Tel Aviv", 373,
+			    'data'[Club] = "Atlas", 374,
+			    'data'[Club] = "Genoa", 375,
+			    'data'[Club] = "Cerro Porteño", 376,
+			    'data'[Club] = "Melb. Victory", 377,
+			    'data'[Club] = "Chaves", 378,
+			    'data'[Club] = "U Concepción", 379,
+			    'data'[Club] = "AGF", 380,
+			    'data'[Club] = "Farense", 381,
+			    'data'[Club] = "Machida Zelvia", 382,
+			    'data'[Club] = "Sparta Prague", 383,
+			    'data'[Club] = "Twente", 384,
+			    'data'[Club] = "Granada", 385,
+			    BLANK()
+			)
+			```
+		isHidden
+		formatString: 0
+		lineageTag: b2a3c630-da3c-4d1e-860f-1edea25dedc6
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Partidos jugados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f69131c-396a-4d73-94fd-16eb01e9f99c
+		summarizeBy: sum
+		sourceColumn: Partidos jugados
+
+		annotation SummarizationSetBy = Automatic
+
+	column Goles
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b0afa95-0ec5-4581-a42c-a51dcb90080c
+		summarizeBy: sum
+		sourceColumn: Goles
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Goles + Asistencia'
+		dataType: int64
+		formatString: 0
+		lineageTag: 362fd7be-4f55-4de8-81a0-dc19928ca318
+		summarizeBy: sum
+		sourceColumn: Goles + Asistencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tarjetas Amarillas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 04d49356-0416-4edb-9a82-d177ba1b0570
+		summarizeBy: sum
+		sourceColumn: Tarjetas Amarillas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tarjetas Rojas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1be7f253-3d10-4538-be1e-31ec553a9ab1
+		summarizeBy: sum
+		sourceColumn: Tarjetas Rojas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition data = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\WordCup_2026\data.csv"),[Delimiter=",", Columns=25, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Rk", Int64.Type}, {"Player", type text}, {"Pos", type text}, {"Squad", type text}, {"Age", Int64.Type}, {"Club", type text}, {"Born", Int64.Type}, {"MP", Int64.Type}, {"Starts", Int64.Type}, {"Min", Int64.Type}, {"90s", Int64.Type}, {"Gls", Int64.Type}, {"Ast", Int64.Type}, {"G+A", Int64.Type}, {"G-PK", Int64.Type}, {"PK", Int64.Type}, {"PKatt", Int64.Type}, {"CrdY", Int64.Type}, {"CrdR", Int64.Type}, {"PlayerID", type text}, {"AstPer90", Int64.Type}, {"G+APer90", Int64.Type}, {"GlsPer90", Int64.Type}, {"G-PKPer90", Int64.Type}, {"G+A-PKPer90", Int64.Type}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Starts", "90s", "G-PK", "PK", "PKatt", "AstPer90", "G+APer90", "GlsPer90", "G-PKPer90", "G+A-PKPer90"}),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Columnas quitadas",{"Rk", "PlayerID", "Player", "Pos", "Squad", "Age", "Club", "Born", "MP", "Min", "Gls", "Ast", "G+A", "CrdY", "CrdR"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"PlayerID", "ID_Jugador"}, {"Player", "Jugador"}, {"Pos", "Posicion"}, {"Squad", "Selección"}, {"Age", "Edad"}, {"Born", "Año_nacimiento"}, {"MP", "Partidos jugados"}, {"Min", "Minutos"}, {"Gls", "Goles"}, {"Ast", "Asistencias"}, {"G+A", "Goles + Asistencia"}, {"CrdY", "Tarjetas Amarillas"}, {"CrdR", "Tarjetas Rojas"}}),
+				    #"Columnas reordenadas1" = Table.ReorderColumns(#"Columnas con nombre cambiado",{"Rk", "ID_Jugador", "Jugador", "Edad", "Posicion", "Selección", "Club", "Año_nacimiento", "Partidos jugados", "Minutos", "Goles", "Asistencias", "Goles + Asistencia", "Tarjetas Amarillas", "Tarjetas Rojas"}),
+				    #"Dividir columna por posición" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas reordenadas1", {{"Edad", type text}}, "es-ES"), "Edad", Splitter.SplitTextByPositions({0, 2}, false), {"Edad.1", "Edad.2"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Dividir columna por posición",{{"Edad.1", Int64.Type}, {"Edad.2", Int64.Type}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado1",{"Edad.2"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Columnas quitadas1",{{"Edad.1", "Edad"}}),
+				    #"Filas filtradas" = Table.SelectRows(#"Columnas con nombre cambiado1", each [Club] <> null and [Club] <> ""),
+				    #"Dividir columna por posición1" = Table.SplitColumn(Table.TransformColumnTypes(#"Filas filtradas", {{"Año_nacimiento", type text}}, "es-ES"), "Año_nacimiento", Splitter.SplitTextByPositions({0, 4}, false), {"Año_nacimiento.1", "Año_nacimiento.2"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Dividir columna por posición1",{{"Año_nacimiento.1", Int64.Type}, {"Año_nacimiento.2", Int64.Type}}),
+				    #"Columnas quitadas2" = Table.RemoveColumns(#"Tipo cambiado2",{"Año_nacimiento.2"}),
+				    #"Columnas con nombre cambiado2" = Table.RenameColumns(#"Columnas quitadas2",{{"Año_nacimiento.1", "Año_nacimiento"}}),
+				    #"Dividir columna por delimitador" = Table.SplitColumn(#"Columnas con nombre cambiado2", "Selección", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Selección.1", "Selección.2"}),
+				    #"Tipo cambiado3" = Table.TransformColumnTypes(#"Dividir columna por delimitador",{{"Selección.1", type text}, {"Selección.2", type text}}),
+				    #"Columnas quitadas3" = Table.RemoveColumns(#"Tipo cambiado3",{"Selección.1"}),
+				    #"Columnas con nombre cambiado3" = Table.RenameColumns(#"Columnas quitadas3",{{"Selección.2", "Selección"}}),
+				    #"Dividir columna por delimitador1" = Table.SplitColumn(#"Columnas con nombre cambiado3", "Club", Splitter.SplitTextByEachDelimiter({"."}, QuoteStyle.Csv, false), {"Club.1", "Club.2"}),
+				    #"Tipo cambiado4" = Table.TransformColumnTypes(#"Dividir columna por delimitador1",{{"Club.1", Int64.Type}, {"Club.2", type text}}),
+				    #"Columnas quitadas4" = Table.RemoveColumns(#"Tipo cambiado4",{"Club.1"}),
+				    #"Dividir columna por delimitador2" = Table.SplitColumn(#"Columnas quitadas4", "Club.2", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Club.2.1", "Club.2.2"}),
+				    #"Tipo cambiado5" = Table.TransformColumnTypes(#"Dividir columna por delimitador2",{{"Club.2.1", type text}, {"Club.2.2", type text}}),
+				    #"Columnas con nombre cambiado4" = Table.RenameColumns(#"Tipo cambiado5",{{"Club.2.1", "País_club"}, {"Club.2.2", "Club"}}),
+				    #"Columnas reordenadas2" = Table.ReorderColumns(#"Columnas con nombre cambiado4",{"Rk", "ID_Jugador", "Jugador", "Edad", "Posicion", "Año_nacimiento", "Selección", "Club", "País_club", "Partidos jugados", "Minutos", "Goles", "Asistencias", "Goles + Asistencia", "Tarjetas Amarillas", "Tarjetas Rojas"}),
+				    #"Columnas quitadas5" = Table.RemoveColumns(#"Columnas reordenadas2",{"ID_Jugador"}),
+				    #"Columnas con nombre cambiado5" = Table.RenameColumns(#"Columnas quitadas5",{{"Rk", "ID_jugador"}}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Columnas con nombre cambiado5","IR Iran","Iran",Replacer.ReplaceText,{"Selección"}),
+				    #"Filas filtradas1" = Table.SelectRows(#"Valor reemplazado", each true),
+				    #"Dividir columna por posición2" = Table.SplitColumn(Table.TransformColumnTypes(#"Filas filtradas1", {{"Partidos jugados", type text}}, "es-ES"), "Partidos jugados", Splitter.SplitTextByPositions({0, 1}, false), {"Partidos jugados.1", "Partidos jugados.2"}),
+				    #"Tipo cambiado6" = Table.TransformColumnTypes(#"Dividir columna por posición2",{{"Partidos jugados.1", Int64.Type}, {"Partidos jugados.2", Int64.Type}}),
+				    #"Columnas quitadas6" = Table.RemoveColumns(#"Tipo cambiado6",{"Partidos jugados.2"}),
+				    #"Columnas con nombre cambiado6" = Table.RenameColumns(#"Columnas quitadas6",{{"Partidos jugados.1", "Partidos jugados"}}),
+				    #"Dividir columna por posición3" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas con nombre cambiado6", {{"Goles", type text}}, "es-ES"), "Goles", Splitter.SplitTextByPositions({0, 1}, false), {"Goles.1", "Goles.2"}),
+				    #"Tipo cambiado7" = Table.TransformColumnTypes(#"Dividir columna por posición3",{{"Goles.1", Int64.Type}, {"Goles.2", Int64.Type}}),
+				    #"Columnas quitadas7" = Table.RemoveColumns(#"Tipo cambiado7",{"Goles.2"}),
+				    #"Columnas con nombre cambiado7" = Table.RenameColumns(#"Columnas quitadas7",{{"Goles.1", "Goles"}}),
+				    #"Dividir columna por posición4" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas con nombre cambiado7", {{"Goles + Asistencia", type text}}, "es-ES"), "Goles + Asistencia", Splitter.SplitTextByPositions({0, 1}, false), {"Goles + Asistencia.1", "Goles + Asistencia.2"}),
+				    #"Tipo cambiado8" = Table.TransformColumnTypes(#"Dividir columna por posición4",{{"Goles + Asistencia.1", Int64.Type}, {"Goles + Asistencia.2", Int64.Type}}),
+				    #"Columnas quitadas8" = Table.RemoveColumns(#"Tipo cambiado8",{"Goles + Asistencia.2"}),
+				    #"Columnas con nombre cambiado8" = Table.RenameColumns(#"Columnas quitadas8",{{"Goles + Asistencia.1", "Goles + Asistencia"}}),
+				    #"Dividir columna por posición5" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas con nombre cambiado8", {{"Tarjetas Amarillas", type text}}, "es-ES"), "Tarjetas Amarillas", Splitter.SplitTextByPositions({0, 1}, false), {"Tarjetas Amarillas.1", "Tarjetas Amarillas.2"}),
+				    #"Tipo cambiado9" = Table.TransformColumnTypes(#"Dividir columna por posición5",{{"Tarjetas Amarillas.1", Int64.Type}, {"Tarjetas Amarillas.2", Int64.Type}}),
+				    #"Columnas quitadas9" = Table.RemoveColumns(#"Tipo cambiado9",{"Tarjetas Amarillas.2"}),
+				    #"Columnas con nombre cambiado9" = Table.RenameColumns(#"Columnas quitadas9",{{"Tarjetas Amarillas.1", "Tarjetas Amarillas"}}),
+				    #"Dividir columna por posición6" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas con nombre cambiado9", {{"Tarjetas Rojas", type text}}, "es-ES"), "Tarjetas Rojas", Splitter.SplitTextByPositions({0, 1}, false), {"Tarjetas Rojas.1", "Tarjetas Rojas.2"}),
+				    #"Tipo cambiado10" = Table.TransformColumnTypes(#"Dividir columna por posición6",{{"Tarjetas Rojas.1", Int64.Type}, {"Tarjetas Rojas.2", Int64.Type}}),
+				    #"Columnas quitadas10" = Table.RemoveColumns(#"Tipo cambiado10",{"Tarjetas Rojas.2"}),
+				    #"Columnas con nombre cambiado10" = Table.RenameColumns(#"Columnas quitadas10",{{"Tarjetas Rojas.1", "Tarjetas Rojas"}})
+				in
+				    #"Columnas con nombre cambiado10"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

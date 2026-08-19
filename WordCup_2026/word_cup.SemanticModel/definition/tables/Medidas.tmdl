@@ -1,0 +1,71 @@
+table Medidas
+	lineageTag: 72235a4f-a763-40b5-9dd4-06a9cc325b3c
+
+	measure Total_goles = ```
+			SUM(data[Goles]) 
+			```
+		formatString: 0
+		lineageTag: 33b2b8ff-20cc-4681-9d9e-45a0a5f6a3c6
+
+	measure Partidos_unicos = MAX(data[Partidos jugados])
+		formatString: 0
+		lineageTag: 22916fee-2378-4382-9d9f-b5b414757e99
+
+	measure 'Media goles_partido' = ```
+			DIVIDE([Total_goles],[Partidos_unicos]) 
+			```
+		lineageTag: 606e635a-2d17-40df-9129-74966eaa0262
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure total_tajetas_rojas = ```
+			SUM(data[Tarjetas Rojas]) 
+			```
+		formatString: 0
+		lineageTag: 3c16cee4-d901-455e-9357-a92ca60773e4
+
+	measure total_tarjetas_amarillas = ```
+			SUM(data[Tarjetas Amarillas]) 
+			```
+		formatString: 0
+		lineageTag: 5f00b89b-6745-4764-9a5b-5de2ff93e2a7
+
+	measure 'Media rojas_partido' = DIVIDE([total_tajetas_rojas], [Partidos_unicos])
+		lineageTag: 6ec32fd9-c1ce-4dd2-bc1a-1015c15bdf5a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Media amarillas_partido' = ```
+			DIVIDE([total_tarjetas_amarillas],[Partidos_unicos]) 
+			```
+		lineageTag: 1208467e-4c2e-4fdf-8f73-d83fad1663fe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Total_goles_asistencia = SUM(data[Goles + Asistencia])
+		formatString: 0
+		lineageTag: 5c1df1e3-cfb7-42d4-b2ee-c2984b5166c0
+
+	measure 'Media goles_asistencia_partido' = DIVIDE([Total_goles_asistencia],[Partidos_unicos])
+		lineageTag: 4339f9ab-da69-413f-8661-5ec4b7210c90
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 1b4ef050-9fdc-4859-a014-a12fd5c1f23a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 8be99e20848d4aa3baa06d3ed23fa3bb
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

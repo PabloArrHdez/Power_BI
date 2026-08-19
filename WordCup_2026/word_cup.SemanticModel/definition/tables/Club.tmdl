@@ -1,0 +1,77 @@
+table Club
+	lineageTag: 8c9adb76-a880-45e0-bf06-5c50699c2997
+
+	column id_club
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 25c4035a-554b-444b-a73f-6a7b609da4af
+		summarizeBy: none
+		sourceColumn: id_club
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Club
+		dataType: string
+		lineageTag: b4bef85e-4ecb-497a-9f86-81bcd08d8579
+		summarizeBy: none
+		sourceColumn: Club
+
+		annotation SummarizationSetBy = Automatic
+
+	column País_club
+		dataType: string
+		lineageTag: 2fc1cf35-3357-4e59-8850-1075b2549aee
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: País_club
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Club = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\WordCup_2026\data.csv"),[Delimiter=",", Columns=25, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Rk", Int64.Type}, {"Player", type text}, {"Pos", type text}, {"Squad", type text}, {"Age", Int64.Type}, {"Club", type text}, {"Born", Int64.Type}, {"MP", Int64.Type}, {"Starts", Int64.Type}, {"Min", Int64.Type}, {"90s", Int64.Type}, {"Gls", Int64.Type}, {"Ast", Int64.Type}, {"G+A", Int64.Type}, {"G-PK", Int64.Type}, {"PK", Int64.Type}, {"PKatt", Int64.Type}, {"CrdY", Int64.Type}, {"CrdR", Int64.Type}, {"PlayerID", type text}, {"AstPer90", Int64.Type}, {"G+APer90", Int64.Type}, {"GlsPer90", Int64.Type}, {"G-PKPer90", Int64.Type}, {"G+A-PKPer90", Int64.Type}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Starts", "90s", "G-PK", "PK", "PKatt", "AstPer90", "G+APer90", "GlsPer90", "G-PKPer90", "G+A-PKPer90"}),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Columnas quitadas",{"Rk", "PlayerID", "Player", "Pos", "Squad", "Age", "Club", "Born", "MP", "Min", "Gls", "Ast", "G+A", "CrdY", "CrdR"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas reordenadas",{{"PlayerID", "ID_Jugador"}, {"Player", "Jugador"}, {"Pos", "Posicion"}, {"Squad", "Selección"}, {"Age", "Edad"}, {"Born", "Año_nacimiento"}, {"MP", "Partidos jugados"}, {"Min", "Minutos"}, {"Gls", "Goles"}, {"Ast", "Asistencias"}, {"G+A", "Goles + Asistencia"}, {"CrdY", "Tarjetas Amarillas"}, {"CrdR", "Tarjetas Rojas"}}),
+				    #"Columnas reordenadas1" = Table.ReorderColumns(#"Columnas con nombre cambiado",{"Rk", "ID_Jugador", "Jugador", "Edad", "Posicion", "Selección", "Club", "Año_nacimiento", "Partidos jugados", "Minutos", "Goles", "Asistencias", "Goles + Asistencia", "Tarjetas Amarillas", "Tarjetas Rojas"}),
+				    #"Dividir columna por posición" = Table.SplitColumn(Table.TransformColumnTypes(#"Columnas reordenadas1", {{"Edad", type text}}, "es-ES"), "Edad", Splitter.SplitTextByPositions({0, 2}, false), {"Edad.1", "Edad.2"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Dividir columna por posición",{{"Edad.1", Int64.Type}, {"Edad.2", Int64.Type}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado1",{"Edad.2"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Columnas quitadas1",{{"Edad.1", "Edad"}}),
+				    #"Filas filtradas" = Table.SelectRows(#"Columnas con nombre cambiado1", each [Club] <> null and [Club] <> ""),
+				    #"Dividir columna por posición1" = Table.SplitColumn(Table.TransformColumnTypes(#"Filas filtradas", {{"Año_nacimiento", type text}}, "es-ES"), "Año_nacimiento", Splitter.SplitTextByPositions({0, 4}, false), {"Año_nacimiento.1", "Año_nacimiento.2"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Dividir columna por posición1",{{"Año_nacimiento.1", Int64.Type}, {"Año_nacimiento.2", Int64.Type}}),
+				    #"Columnas quitadas2" = Table.RemoveColumns(#"Tipo cambiado2",{"Año_nacimiento.2"}),
+				    #"Columnas con nombre cambiado2" = Table.RenameColumns(#"Columnas quitadas2",{{"Año_nacimiento.1", "Año_nacimiento"}}),
+				    #"Dividir columna por delimitador" = Table.SplitColumn(#"Columnas con nombre cambiado2", "Selección", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Selección.1", "Selección.2"}),
+				    #"Tipo cambiado3" = Table.TransformColumnTypes(#"Dividir columna por delimitador",{{"Selección.1", type text}, {"Selección.2", type text}}),
+				    #"Columnas quitadas3" = Table.RemoveColumns(#"Tipo cambiado3",{"Selección.1"}),
+				    #"Columnas con nombre cambiado3" = Table.RenameColumns(#"Columnas quitadas3",{{"Selección.2", "Selección"}}),
+				    #"Dividir columna por delimitador1" = Table.SplitColumn(#"Columnas con nombre cambiado3", "Club", Splitter.SplitTextByEachDelimiter({"."}, QuoteStyle.Csv, false), {"Club.1", "Club.2"}),
+				    #"Tipo cambiado4" = Table.TransformColumnTypes(#"Dividir columna por delimitador1",{{"Club.1", Int64.Type}, {"Club.2", type text}}),
+				    #"Columnas quitadas4" = Table.RemoveColumns(#"Tipo cambiado4",{"Club.1"}),
+				    #"Dividir columna por delimitador2" = Table.SplitColumn(#"Columnas quitadas4", "Club.2", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Club.2.1", "Club.2.2"}),
+				    #"Tipo cambiado5" = Table.TransformColumnTypes(#"Dividir columna por delimitador2",{{"Club.2.1", type text}, {"Club.2.2", type text}}),
+				    #"Columnas con nombre cambiado4" = Table.RenameColumns(#"Tipo cambiado5",{{"Club.2.1", "País_club"}, {"Club.2.2", "Club"}}),
+				    #"Columnas reordenadas2" = Table.ReorderColumns(#"Columnas con nombre cambiado4",{"Rk", "ID_Jugador", "Jugador", "Edad", "Posicion", "Año_nacimiento", "Selección", "Club", "País_club", "Partidos jugados", "Minutos", "Goles", "Asistencias", "Goles + Asistencia", "Tarjetas Amarillas", "Tarjetas Rojas"}),
+				    #"Columnas quitadas5" = Table.RemoveColumns(#"Columnas reordenadas2",{"ID_Jugador"}),
+				    #"Columnas con nombre cambiado5" = Table.RenameColumns(#"Columnas quitadas5",{{"Rk", "ID_jugador"}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Columnas con nombre cambiado5",{"Club", "País_club"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"Club"}),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Índice", 1, 1, Int64.Type),
+				    #"Columnas reordenadas3" = Table.ReorderColumns(#"Índice agregado",{"Índice", "Club", "País_club"}),
+				    #"Columnas con nombre cambiado6" = Table.RenameColumns(#"Columnas reordenadas3",{{"Índice", "id_club"}})
+				in
+				    #"Columnas con nombre cambiado6"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

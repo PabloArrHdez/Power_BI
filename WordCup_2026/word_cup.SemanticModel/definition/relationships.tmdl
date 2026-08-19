@@ -1,0 +1,16 @@
+relationship 91af4461-38bc-8a6f-2cc8-040f33eaee40
+	fromColumn: data.id_posicion
+	toColumn: Posicion.id_posicion
+
+relationship e629955b-59ee-29d4-8840-d98049f471a1
+	fromColumn: data.id_seleccion
+	toColumn: Seleccion.id_seleccion
+
+relationship d360e194-4402-4f04-e3e3-fb94d0b52953
+	fromColumn: data.id_club
+	toColumn: Club.id_club
+
+relationship c3f4bd74-7a6f-7c20-65a4-8d0838f8fdd0
+	fromColumn: data.Año_nacimiento
+	toColumn: Nacimiento.Año_nacimiento
+

@@ -1,0 +1,23 @@
+table Nacimiento
+	lineageTag: 90e9d91f-bc65-4664-8faa-c0846f9d03da
+
+	column Año_nacimiento
+		formatString: 0
+		lineageTag: d7d19a95-0a42-4924-a7d2-0b4a4cca843c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año_nacimiento]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Nacimiento = calculated
+		mode: import
+		source =
+				
+				SELECTCOLUMNS (
+				    GENERATESERIES ( 1985, 2008, 1 ),
+				    "Año_nacimiento", [Value]
+				)
+
+	annotation PBI_Id = e8d9375db714431180bdf8e8143c74ff
+

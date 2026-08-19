@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "word_cup"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "28c098ae-2358-4df3-ac79-4b4c9cc1aa0a"
+  }
+}
