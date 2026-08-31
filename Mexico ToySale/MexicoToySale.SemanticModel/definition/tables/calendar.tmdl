@@ -1,0 +1,88 @@
+table calendar
+	lineageTag: 652c9667-6c74-4443-bb8b-d7f0087f9f22
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: b3702907-ef6b-459e-8543-ab47dedb8f3f
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Inicio del mes'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: aa806666-33b3-40de-9b23-3e98be3e0e3c
+		summarizeBy: none
+		sourceColumn: Inicio del mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Inicio de la semana'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 64511966-947d-4cd3-8e96-8e9b63bf9ca2
+		summarizeBy: none
+		sourceColumn: Inicio de la semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Nombre_Mes = ```
+			FORMAT('calendar'[Date], "MMMM") 
+			```
+		lineageTag: f6b32bae-1a74-4523-b437-7e087acb3b39
+		summarizeBy: none
+		sortByColumn: NumeroMes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroMes = MONTH('calendar'[Date])
+		formatString: 0
+		lineageTag: 56a75e4a-befc-40f9-972f-01e7243c0f42
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Inicio del mes Jerarquía'
+		lineageTag: d919ddc4-6af9-47d6-adab-4d2bc7634299
+
+		level 'Inicio del mes'
+			lineageTag: 25438413-5398-4efd-b66a-b1a10ab4730a
+			column: 'Inicio del mes'
+
+		level 'Inicio de la semana'
+			lineageTag: 5a840db8-3238-47a7-8e70-0fa0ef332f13
+			column: 'Inicio de la semana'
+
+		level Date
+			lineageTag: ab054447-8339-4bf4-8223-296a411dd477
+			column: Date
+
+	partition calendar = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\MexicoToySale\data\calendar.csv"),[Delimiter=";", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}}),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(#"Tipo cambiado", [PromoteAllScalars=true]),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(#"Encabezados promovidos", {{"Date", type date}}, "en-US"),
+				    #"Inicio del mes insertado" = Table.AddColumn(#"Tipo cambiado con configuración regional", "Inicio del mes", each Date.StartOfMonth([Date]), type date),
+				    #"Inicio de la semana insertado" = Table.AddColumn(#"Inicio del mes insertado", "Inicio de la semana", each Date.StartOfWeek([Date]), type date)
+				in
+				    #"Inicio de la semana insertado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

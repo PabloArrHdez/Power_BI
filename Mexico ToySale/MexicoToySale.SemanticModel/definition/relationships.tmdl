@@ -1,0 +1,17 @@
+relationship 060ac7bb-b002-779c-7afd-14193039a4b2
+	fromColumn: sales.Date
+	toColumn: calendar.Date
+
+relationship AutoDetected_49b58e05-4fa2-447f-81e5-cb2c6cbd5242
+	fromColumn: sales.Product_ID
+	toColumn: products.Product_ID
+
+relationship d7b79276-1084-4b4c-9c2a-dc563d3fd547
+	joinOnDateBehavior: datePartOnly
+	fromColumn: stores.Store_Open_Date
+	toColumn: LocalDateTable_216e78bc-4ccb-4bf6-984f-9c00428f97f5.Date
+
+relationship AutoDetected_7d2f1f17-9171-4973-b085-b093e68283b1
+	fromColumn: sales.Store_ID
+	toColumn: stores.Store_ID
+

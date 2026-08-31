@@ -1,0 +1,64 @@
+table Medidas
+	lineageTag: 0ff93e3a-32eb-491e-8b5c-6a98522a151f
+
+	measure Total_orders = ```
+			
+			 DISTINCTCOUNT(
+			    sales[Sale_ID]
+			 )
+			```
+		formatString: 0
+		lineageTag: 63d371e4-e485-4ea1-b01b-971b124fc68e
+
+	measure Total_ingresos = ```
+			
+			 SUM(
+			    sales[Ingresos]
+			 )
+			```
+		formatString: #,0.###############\ "€";-#,0.###############\ "€";#,0.###############\ "€"
+		lineageTag: 6acb6430-e96e-4ff5-9766-e25fb7759b63
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
+
+	measure Total_beneficio = ```
+			
+			 SUM(
+			    sales[Beneficio]
+			 )
+			```
+		formatString: #,0\ "€";-#,0\ "€";#,0\ "€"
+		lineageTag: 3e005101-c001-46dd-a2d7-3cb9d8718c6d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-ES"}
+
+	measure Precio_Medio = ```
+			AVERAGE(products[Product_Price]) 
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a60e2027-d9b8-41dc-85d9-eb68f0c5ff99
+
+	measure Coste_Medio = ```
+			AVERAGE(products[Product_Cost]) 
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 06831b1c-ee6f-4dd1-83c6-e63a4d880ede
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 59201e7d-d121-4d09-b8b5-3ebab9ce57e7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = dab6b423e8a5470d8c214039a4cb0a87
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

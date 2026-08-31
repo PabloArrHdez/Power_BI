@@ -1,0 +1,118 @@
+table sales
+	lineageTag: f51aa9e0-1c43-4a0f-bb78-9ebe5b139541
+
+	column Sale_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c7e1a79-2e76-48e1-9ff1-73def973a4f4
+		summarizeBy: count
+		sourceColumn: Sale_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: b3e6d581-83ac-4ee4-8991-785870b8000e
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Store_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2be60028-f326-4591-96e2-6c7f14126d26
+		summarizeBy: none
+		sourceColumn: Store_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6dfbaf32-ae7a-4235-81ae-7cba073f63c4
+		summarizeBy: none
+		sourceColumn: Product_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Units
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e00909f-b52c-4a8d-9739-9033ea4c6bda
+		summarizeBy: sum
+		sourceColumn: Units
+
+		annotation SummarizationSetBy = Automatic
+
+	column Coste =
+			
+			RELATED(
+			    products[Product_Cost]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7f0a9013-1f94-4634-bf0d-a4722def6aea
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Precio = ```
+			
+			 RELATED(
+			    products[Product_Price]
+			 )
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a4cc62f5-161b-4d1f-86eb-03cfdf22db89
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ingresos =
+			
+			sales[Precio]*sales[Units]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4ce051a4-790f-4790-acef-6e01629bd107
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beneficio = ```
+			
+			 sales[Ingresos] - 
+			 (sales[Coste]*sales[Units])
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 01cf53e9-b9ad-4a14-8189-b6bdd3facd80
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	partition sales = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\MexicoToySale\data\sales.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Sale_ID", Int64.Type}, {"Date", type date}, {"Store_ID", Int64.Type}, {"Product_ID", Int64.Type}, {"Units", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

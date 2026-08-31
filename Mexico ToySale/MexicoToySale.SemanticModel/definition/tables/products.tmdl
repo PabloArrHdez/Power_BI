@@ -1,0 +1,68 @@
+table products
+	lineageTag: 23cdcc40-4dc1-435c-a984-c4b000fb61ff
+
+	column Product_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e6275fa-2c40-47e0-99c8-624ac2e8be14
+		summarizeBy: none
+		sourceColumn: Product_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Name
+		dataType: string
+		lineageTag: 069c1cf1-dd27-4871-8c14-428f376be995
+		summarizeBy: none
+		sourceColumn: Product_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Category
+		dataType: string
+		lineageTag: 9c78282a-d456-4144-a022-2fc4b689a6d0
+		summarizeBy: none
+		sourceColumn: Product_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Cost
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c1252102-ade6-4a6f-8adb-179b1768e3eb
+		summarizeBy: none
+		sourceColumn: Product_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column Product_Price
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 32af9a67-dad4-442d-93f9-ea61cd57b6d4
+		summarizeBy: none
+		sourceColumn: Product_Price
+
+		annotation SummarizationSetBy = Automatic
+
+	partition products = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\MexicoToySale\data\products.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Product_ID", Int64.Type}, {"Product_Name", type text}, {"Product_Category", type text}, {"Product_Cost", type text}, {"Product_Price", type text}}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Tipo cambiado","$"," ",Replacer.ReplaceText,{"Product_Cost"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado",".",",",Replacer.ReplaceText,{"Product_Cost"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Valor reemplazado1",{{"Product_Cost", Currency.Type}}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Tipo cambiado1","$"," ",Replacer.ReplaceText,{"Product_Price"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2",".",",",Replacer.ReplaceText,{"Product_Price"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Valor reemplazado3",{{"Product_Price", Currency.Type}})
+				in
+				    #"Tipo cambiado2"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

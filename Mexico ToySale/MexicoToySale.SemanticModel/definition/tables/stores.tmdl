@@ -1,0 +1,67 @@
+table stores
+	lineageTag: 77ca21f7-00fe-473a-83c5-91200127b904
+
+	column Store_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e474f0f-9567-400d-b2d8-93c7c90b9a80
+		summarizeBy: none
+		sourceColumn: Store_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Store_Name
+		dataType: string
+		lineageTag: a66d57d8-bfc3-4911-96b3-92f5fbbb3b9c
+		summarizeBy: none
+		sourceColumn: Store_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Store_City
+		dataType: string
+		lineageTag: b2c4f10b-1734-44a4-b8b1-50524cce6c6c
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: Store_City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Store_Location
+		dataType: string
+		lineageTag: da31d278-d08b-4109-89f9-849f2354702c
+		summarizeBy: none
+		sourceColumn: Store_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Store_Open_Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 14c0fa1c-8f5d-4f3a-9c5b-4f6e09c7f03f
+		summarizeBy: none
+		sourceColumn: Store_Open_Date
+
+		variation Variación
+			isDefault
+			relationship: d7b79276-1084-4b4c-9c2a-dc563d3fd547
+			defaultHierarchy: LocalDateTable_216e78bc-4ccb-4bf6-984f-9c00428f97f5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition stores = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\MexicoToySale\data\stores.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Store_ID", Int64.Type}, {"Store_Name", type text}, {"Store_City", type text}, {"Store_Location", type text}, {"Store_Open_Date", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

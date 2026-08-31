@@ -1,0 +1,5 @@
+# Descripción #
+
+El proyecto consta de un supuesto caso de análisis de datos, junto con el cálculo de varias medidas y dimensiones, para conocer aspectos de un supuesto caso de una empresa de venta de juguetes, durante 21 meses, en México. Tal proyecto muestra los diferentes costes e ingresos medios de los múltiples productos, separados por categorías de los mismos, así como los ingresos y costes totales para finalizar calculando los beneficios totales de los mismos a lo largo del período de tiempo que dura el análisis.
+ 
+La adquisición de los datos y puesta en marcha de dicho proyecto ha sido a través de la página web (https://mavenanalytics.io/), concretamente desde (https://app.mavenanalytics.io/guided-projects/331595bf-f741-4894-b9c6-1c047c33e8ad) en donde el profesional "Aaron Parry" ha desarrollado este proyecto práctico de Power BI.
