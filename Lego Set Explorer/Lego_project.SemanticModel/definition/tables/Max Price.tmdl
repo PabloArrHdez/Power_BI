@@ -1,0 +1,26 @@
+table 'Max Price'
+	lineageTag: 354e129e-fb00-4c16-9b99-5593b63fcdeb
+
+	measure 'Valor de Max Price' = SELECTEDVALUE('Max Price'[Max Price], 850)
+		formatString: 0
+		lineageTag: e8d03da5-7b4d-4ca3-b2d1-40c5c5e67661
+
+	column 'Max Price'
+		formatString: 0
+		lineageTag: fffa7160-d949-484e-a4d7-7ab4cfa23922
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Max Price' = calculated
+		mode: import
+		source = GENERATESERIES(0, 850, 5)
+
+	annotation PBI_Id = 530fe11abb4a4c608f034415a739fcd6
+

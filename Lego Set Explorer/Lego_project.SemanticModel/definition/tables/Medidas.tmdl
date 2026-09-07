@@ -1,0 +1,74 @@
+table Medidas
+	lineageTag: 8dc7fb64-020f-46ca-9c42-9628950a637d
+
+	measure Total_sets = DISTINCTCOUNT(lego_sets[set_id])
+		formatString: #,0
+		lineageTag: 6bf4814f-2f26-4190-af16-d43a58d7bebf
+
+	measure Total_groups = ```
+			DISTINCTCOUNT(lego_sets[themeGroup]) 
+			```
+		formatString: 0
+		lineageTag: 0415c508-b22b-4d69-a234-59c5452cc72a
+
+	measure Average_price = AVERAGE(lego_sets[price])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: e682f560-e598-44f3-9790-44664d7325e0
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure Average_pieces = AVERAGE(lego_sets[pieces])
+		lineageTag: 709a3adf-584f-41e5-8005-76174b056bd0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Average_age = AVERAGE(lego_sets[age])
+		lineageTag: 62333c2c-965f-433b-a975-67638e5f2946
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected Set' = IF(HASONEVALUE(lego_sets[name]), MAX(lego_sets[name]), "Select a Set")
+		lineageTag: c9b41ce2-ce43-4e4b-acbe-d73e70c021db
+
+	measure 'Selected a Price' = IF(HASONEVALUE(lego_sets[price]), MAX(lego_sets[price]), "-")
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4ac65524-e84e-4b5f-aa59-d49c340c7a98
+
+	measure 'Selected a Year' = IF(HASONEVALUE(lego_sets[year]), MAX(lego_sets[year]), "-")
+		formatString: 0.0
+		lineageTag: 240fce46-d1b6-4465-9bd0-30a0abd6a8a1
+
+	measure 'Selected a Pieces' = IF(HASONEVALUE(lego_sets[pieces]), MAX(lego_sets[pieces]), "-")
+		lineageTag: 9609c5b5-b3d3-4ea0-b3fc-1e5a7e9ae33f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected a Age' = IF(HASONEVALUE(lego_sets[age]), MAX(lego_sets[age]), "-")
+		lineageTag: 19f92e2a-d81d-47cd-af76-cc602fd26068
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Max_price_filter = ```
+			IF([Average_price]<= 'Max Price'[Valor de Max Price], 1, 0) 
+			```
+		formatString: 0
+		lineageTag: 0fafaf49-d676-4be0-961f-7202a51646d0
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 2500067c-201f-4ff4-91e1-b41b04c30fe0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 50e6ce927ccd4ac19abe1b29eacc6b57
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

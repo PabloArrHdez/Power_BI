@@ -1,0 +1,5 @@
+# Descripción #
+
+El proyecto consta de un supuesto caso de análisis de datos, junto con el cálculo de varias medidas y dimensiones, para conocer aspectos de una lista detallada de múltiples artículos de la marca "LEGO", separados por temas y pertenecientes a una saga cinematográfica u otros. Dicho proyecto muestra diferentes características de los mismos, como el número de piezas, el año de lanzamiento, los precios y la edad mínima para poder jugar, así como diferentes imágenes de cada uno de los artículos.
+
+La adquisición de los datos y puesta en marcha de dicho proyecto ha sido a través de la página web (https://mavenanalytics.io/), concretamente desde (https://app.mavenanalytics.io/guided-projects/7ea2d5de-8a63-4c92-8350-b640d6df07d4) en donde el profesional "Chris Dutton" ha desarrollado este proyecto práctico de Power BI.

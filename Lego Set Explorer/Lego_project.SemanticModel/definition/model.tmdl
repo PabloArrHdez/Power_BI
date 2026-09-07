@@ -1,0 +1,21 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["lego_sets"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table lego_sets
+ref table Medidas
+ref table 'Max Price'
+
+ref cultureInfo es-ES
+

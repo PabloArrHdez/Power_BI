@@ -1,0 +1,138 @@
+table lego_sets
+	lineageTag: 285a5921-952a-471d-9ae8-2f9dc6adef2d
+
+	column set_id
+		dataType: string
+		lineageTag: f2755abf-10c0-40e0-9900-d75eaae751be
+		summarizeBy: none
+		sourceColumn: set_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: b85325d1-5271-44d7-815c-eea906598887
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: d3f7d059-f14c-40b6-955f-d952dd204b3d
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column theme
+		dataType: string
+		lineageTag: a812b510-510b-4ad3-9cf9-a23d02be1e4b
+		summarizeBy: none
+		sourceColumn: theme
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtheme
+		dataType: string
+		lineageTag: 5fc8e972-a7df-42b0-afdf-745f71aa756a
+		summarizeBy: none
+		sourceColumn: subtheme
+
+		annotation SummarizationSetBy = Automatic
+
+	column themeGroup
+		dataType: string
+		lineageTag: 6508bbae-695a-4886-9a93-3b9a5d91870e
+		summarizeBy: none
+		sourceColumn: themeGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: ccf755ae-3c58-406c-b05a-d8e848703d77
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column pieces
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6e66711e-914c-474d-ab9a-d9ac8f190d60
+		summarizeBy: sum
+		sourceColumn: pieces
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: 4037d83c-7d99-46db-bfd2-b2d8a356ce96
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 4285a9bc-db9e-4efa-88ea-279f5260b749
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column imageURL
+		dataType: string
+		lineageTag: b11b313d-49fd-45c1-8a93-a1b321ffaf37
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: imageURL
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Age Range'
+		dataType: string
+		lineageTag: 570adc42-51b5-43e5-984f-6f5916e1b1b4
+		summarizeBy: none
+		sourceColumn: Age Range
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Price Range'
+		dataType: string
+		lineageTag: 545fdec9-37fa-41ba-abfa-5ca03f145e5e
+		summarizeBy: none
+		sourceColumn: Price Range
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lego_sets = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\pablo\OneDrive\Escritorio\Lego Set Explorer\data\lego_sets.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"set_id", type text}, {"name", type text}, {"year", Int64.Type}, {"theme", type text}, {"subtheme", type text}, {"themeGroup", type text}, {"category", type text}, {"pieces", Int64.Type}, {"minifigs", type text}, {"agerange_min", type text}, {"US_retailPrice", type text}, {"bricksetURL", type text}, {"thumbnailURL", type text}, {"imageURL", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"minifigs", "bricksetURL", "thumbnailURL"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas quitadas",{{"agerange_min", Int64.Type}}),
+				    #"Filas filtradas" = Table.SelectRows(#"Tipo cambiado1", each [pieces] <> null and [pieces] <> ""),
+				    #"Filas filtradas1" = Table.SelectRows(#"Filas filtradas", each [agerange_min] <> null and [agerange_min] <> ""),
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(#"Filas filtradas1", {{"US_retailPrice", Currency.Type}}, "en-US"),
+				    #"Filas filtradas2" = Table.SelectRows(#"Tipo cambiado con configuración regional", each [US_retailPrice] <> null and [US_retailPrice] <> ""),
+				    #"Filas filtradas3" = Table.SelectRows(#"Filas filtradas2", each [imageURL] <> null and [imageURL] <> ""),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Filas filtradas3",{{"agerange_min", "age"}, {"US_retailPrice", "price"}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "Age Range", each if [age] >= 18 then "Over 18" else if [age] >= 10 then "10 to 17" else if [age] >= 5 then "5 to 9" else "1 to 4"),
+				    #"Columna condicional agregada1" = Table.AddColumn(#"Columna condicional agregada", "Price Range", each if [price] > 500 then "$$$$$" else if [price] > 100 then "$$$$" else if [price] > 50 then "$$$" else if [price] > 25 then "$$" else "$")
+				in
+				    #"Columna condicional agregada1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

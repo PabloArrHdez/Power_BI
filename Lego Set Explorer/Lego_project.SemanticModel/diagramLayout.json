@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 162.21718939181366,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "lego_sets",
+          "nodeLineageTag": "285a5921-952a-471d-9ae8-2f9dc6adef2d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 617.93665158371039,
+            "y": 39.819004524886886
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "8dc7fb64-020f-46ca-9c42-9628950a637d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 901.93665158371039,
+            "y": 38
+          },
+          "nodeIndex": "Max Price",
+          "nodeLineageTag": "354e129e-fb00-4c16-9b99-5593b63fcdeb",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 98.222222222222229,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

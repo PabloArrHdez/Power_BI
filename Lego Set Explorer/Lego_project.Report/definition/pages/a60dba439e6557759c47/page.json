@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a60dba439e6557759c47",
+  "displayName": "dashboard",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#FE8559'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "338L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "d9418297ff28bc8b996a",
+      "target": "171acd7eb34b57ed4cee",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d9418297ff28bc8b996a",
+      "target": "f960067139d666421a98",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d9418297ff28bc8b996a",
+      "target": "66d9b339ecde7206aa27",
+      "type": "NoFilter"
+    }
+  ]
+}
